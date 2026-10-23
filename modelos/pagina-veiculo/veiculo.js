@@ -4,7 +4,8 @@
   if (!estoque.length) return;
 
   const CIDADE = "Contagem - MG";
-  const WHATS = "5500000000000"; // WhatsApp da VR (PROVISÓRIO: trocar pelo número real)
+  const WHATS = "5531921185662"; // WhatsApp da VR: (31) 92118-5662
+  const TELEFONE = "tel:+5531921185662";
   const FOTOS = "/modelos/catalogo/fotos/";
 
   // endereço /toyota-hilux-srx-2019 (ou o antigo ?carro=toyota-hilux-srx-2019)
@@ -218,10 +219,13 @@
     else fipe.style.display = "none";
   }
 
-  // ---------- WhatsApp com o nome do carro ----------
+  // ---------- WhatsApp com o nome da moto e o link da página (o link mostra a foto da moto na conversa) ----------
+  const nomeMsg = `${v.marca.charAt(0)}${v.marca.slice(1).toLowerCase()} ${v.modelo}${v.ano ? ` ${v.ano}` : ""}`; // ex.: Honda PCX 2027
+  const linkMoto = `${location.origin}/${v.slug}`;
   const texto = encodeURIComponent(v.vendido
-    ? `Olá! Vi no site que o ${nome} ${v.ano} já foi vendido. Vocês têm algum parecido?`
-    : `Olá! Tenho interesse no ${nome} ${v.versao} ${v.ano}${v.preco ? ` (${reais(v.preco)})` : ""} que vi no site.`);
+    ? `Olá, VR Multimarcas! Vi no site que a ${nomeMsg} já foi vendida. Vocês têm alguma parecida?\n${linkMoto}`
+    : `Olá, VR Multimarcas! Vi a ${nomeMsg} 0 km no site e tenho interesse. Ela está disponível?\n${linkMoto}`);
+  const msgParcelas = `Olá, VR Multimarcas! Quero simular as parcelas da ${nomeMsg} 0 km que vi no site. Qual a entrada e o valor das parcelas?\n${linkMoto}`;
   if (v.vendido) $$(".botao-whatsapp--grande").forEach((a) => (a.textContent = "Quero um parecido"));
   const aviso = $(".painel-preco__aviso");
   if (aviso && v.vendido) aviso.textContent = "Este já foi vendido, mas a gente procura um igual ou parecido para você.";
@@ -245,9 +249,9 @@
         <div class="card-preco__acoes">
           ${v.vendido
             ? `<a class="card-preco__secundario" href="/motos">Ver estoque</a>`
-            : `<a class="card-preco__secundario" href="${linkW(`Olá! Quero simular as parcelas do ${nome} ${v.versao} ${v.ano}${v.preco ? ` (${reais(v.preco)})` : ""}.`)}" target="_blank" rel="noopener">
+            : `<a class="card-preco__secundario" href="${linkW(msgParcelas)}" target="_blank" rel="noopener">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="M3 10h18M7 15h4" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>Simular parcelas</a>`}
-          <a class="card-preco__secundario" href="https://wa.me/5500000000000" target="_blank" rel="noopener" aria-label="Falar com a loja no WhatsApp">
+          <a class="card-preco__secundario" href="${TELEFONE}" aria-label="Ligar para a loja: (31) 92118-5662">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.5l2.6 4-1.8 1.9a12 12 0 0 0 7.2 7.2l1.9-1.8 4 2.6-1.1 3.1c-.3.8-1.1 1.3-2 1.2C9.6 20.9 3.1 14.4 2.3 6.6c-.1-.9.4-1.7 1.2-2z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></svg>Falar agora</a>
         </div>
         <ul class="card-preco__vantagens">
@@ -260,9 +264,7 @@
   }
 
   // ================= Layout do celular (igual ao app/site móvel da Webmotors) =================
-  const LIGAR = "https://wa.me/5500000000000"; // sem telefone fixo divulgado: o botão abre o WhatsApp (PROVISÓRIO)
   const linkWhats = (msg) => `https://wa.me/${WHATS}?text=${encodeURIComponent(msg)}`;
-  const msgParcelas = `Olá! Quero simular as parcelas do ${nome} ${v.versao} ${v.ano}${v.preco ? ` (${reais(v.preco)})` : ""}.`;
 
   // Fotos: pontinhos de navegação e coração por cima da foto
   const carrossel = $(".DetailCarousel");
@@ -358,7 +360,7 @@
     ${v.vendido
       ? `<a class="barra-acoes__secundario" href="/motos">Ver estoque</a>`
       : `<a class="barra-acoes__secundario" href="${linkWhats(msgParcelas)}" target="_blank" rel="noopener">Ver parcelas</a>`}
-    <a class="barra-acoes__ligar" href="${LIGAR}" aria-label="Falar com a loja no WhatsApp">
+    <a class="barra-acoes__ligar" href="${TELEFONE}" aria-label="Ligar para a loja: (31) 92118-5662">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.5l2.6 4-1.8 1.9a12 12 0 0 0 7.2 7.2l1.9-1.8 4 2.6-1.1 3.1c-.3.8-1.1 1.3-2 1.2C9.6 20.9 3.1 14.4 2.3 6.6c-.1-.9.4-1.7 1.2-2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
     </a>
     <a class="barra-acoes__principal" href="https://wa.me/${WHATS}?text=${texto}" target="_blank" rel="noopener">${v.vendido ? "Quero um parecido" : "Enviar mensagem"}</a>

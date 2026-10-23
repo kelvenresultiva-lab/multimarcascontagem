@@ -1,7 +1,7 @@
 // Página inicial: banners, busca, marcas e vitrine por estilo, montados a partir do window.ESTOQUE.
 (function () {
   const $ = (id) => document.getElementById(id);
-  const WHATS = "5500000000000";
+  const WHATS = "5531921185662"; // WhatsApp da VR: (31) 92118-5662
   const wa = (msg) => `https://wa.me/${WHATS}?text=${encodeURIComponent(msg)}`;
   const ESTOQUE = (window.ESTOQUE || []).filter((v) => !v.vendido);
   const titulo = (t) => String(t).toLowerCase().replace(/(^|[\s(/-])(\p{L})/gu, (m, a, b) => a + b.toUpperCase()).replace(/(\d)Cc\b/g, "$1cc");
@@ -38,7 +38,7 @@
         </picture>
         <a class="banner__area banner__area--tudo" href="${b.v.link}" tabindex="-1" aria-hidden="true"></a>
         <a class="banner__area banner__area--ver" href="${b.v.link}">Ver detalhes da ${nome}</a>
-        <a class="banner__area banner__area--simular" href="${wa(`Olá! Quero simular o financiamento da ${nome}.`)}" target="_blank" rel="noopener">Simular financiamento da ${nome}</a>
+        <a class="banner__area banner__area--simular" href="${wa(`Olá, VR Multimarcas! Quero simular o financiamento da ${titulo(b.v.marca)} ${b.v.modelo} 0 km que vi no site. Qual a entrada e o valor das parcelas?\n${location.origin}${b.v.link}`)}" target="_blank" rel="noopener">Simular financiamento da ${nome}</a>
       </article>`;
     }).join("");
     slides = [...trilho.children];

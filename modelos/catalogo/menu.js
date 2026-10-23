@@ -2,7 +2,7 @@
 (function () {
   const naPaginaDoCarro = !!document.querySelector(".DetailCarousel"); // a página do carro abre em /<slug>
   const BASE = "/motos"; // catálogo (a página inicial fica em /)
-  const WHATS = "5500000000000";
+  const WHATS = "5531921185662"; // WhatsApp da VR: (31) 92118-5662
   const wa = (msg) => `https://wa.me/${WHATS}?text=${encodeURIComponent(msg)}`;
 
   const SECOES = [
@@ -11,7 +11,7 @@
     ["Shineray", `${BASE}?marca=SHINERAY`, '<path d="M4 6h16M4 12h16M4 18h10" />'],
     ["Haojue", `${BASE}?marca=HAOJUE`, '<path d="M4 6h16M4 12h16M4 18h10" />'],
     ["Honda", `${BASE}?marca=HONDA`, '<path d="M4 6h16M4 12h16M4 18h10" />'],
-    ["Financiamento", wa("Olá! Quero simular um financiamento."), '<rect x="3" y="6" width="18" height="13" rx="2" /><path d="M3 10h18M7 15h4" />', true],
+    ["Financiamento", wa(`Olá, VR Multimarcas! Vim pelo site e quero simular o financiamento de uma moto 0 km. Pode me passar as condições?\n${location.origin}/motos`), '<rect x="3" y="6" width="18" height="13" rx="2" /><path d="M3 10h18M7 15h4" />', true],
     ["Como chegar", "https://www.google.com/maps/search/?api=1&query=Rua%20Almerinda%20da%20Costa%20Ribeiro%2C%2021%2C%20Canad%C3%A1%2C%20Contagem%20-%20MG", '<path d="M12 21s-7-4.4-7-10a7 7 0 0 1 14 0c0 5.6-7 10-7 10z" /><circle cx="12" cy="11" r="2.5" />', true],
     ["Contato", "#contato", '<path d="M6.6 3.5l2.6 4-1.8 1.9a12 12 0 0 0 7.2 7.2l1.9-1.8 4 2.6-1.1 3.1c-.3.8-1.1 1.3-2 1.2C9.6 20.9 3.1 14.4 2.3 6.6c-.1-.9.4-1.7 1.2-2z" />'],
   ];
@@ -49,7 +49,7 @@
           <svg class="menu-painel__seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>`).join("")}
       </nav>
       <div class="menu-painel__contato">
-        <a class="menu-painel__whats" href="${wa("Olá! Vim pelo site e quero saber mais sobre as motos.")}" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+        <a class="menu-painel__whats" href="${wa(`Olá, VR Multimarcas! Vim pelo site e quero saber mais sobre as motos 0 km. Pode me ajudar?\n${location.origin}/motos`)}" target="_blank" rel="noopener">Chamar no WhatsApp</a>
         <a class="menu-painel__ligar" href="https://www.google.com/maps/search/?api=1&query=Rua%20Almerinda%20da%20Costa%20Ribeiro%2C%2021%2C%20Canad%C3%A1%2C%20Contagem%20-%20MG" target="_blank" rel="noopener">Rua Almerinda da Costa Ribeiro, 21 — Bairro Canadá</a>
         <a class="menu-painel__insta" href="https://www.instagram.com/vrmultimarcas.contagem.oficial/" target="_blank" rel="noopener">Instagram @vrmultimarcas.contagem.oficial</a>
         <p>Contagem, MG</p>
