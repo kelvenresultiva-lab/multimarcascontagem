@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VR Multimarcas | Motos 0 km em Contagem/MG</title>
+  <meta name="description" content="VR Multimarcas, em Contagem/MG: motos 0 km Shineray, Haojue e Honda com financiamento facilitado e capacete por nossa conta.">
+  <link rel="icon" type="image/svg+xml" href="/modelos/catalogo/simbolo-vr.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/modelos/catalogo/catalogo.css">
+  <link rel="stylesheet" href="/modelos/catalogo/menu.css">
+  <link rel="stylesheet" href="/modelos/inicio/inicio.css">
+</head>
+<body>
+
+  <!-- ===== Topo ===== -->
+  <header class="topo">
+    <div class="topo__conteudo">
+      <a class="topo__marca" href="/"><img class="logo-vr" src="/modelos/catalogo/logo-vr.svg" alt="VR Multimarcas Contagem" width="230" height="30"></a>
+      <nav class="topo__menu" aria-label="Navegação principal">
+        <a href="/motos">Motos</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Rua%20Almerinda%20da%20Costa%20Ribeiro%2C%2021%2C%20Canad%C3%A1%2C%20Contagem%20-%20MG" target="_blank" rel="noopener">Como chegar</a>
+        <a href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Quero%20simular%20um%20financiamento." target="_blank" rel="noopener">Financiamento</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero: banners das motos ===== -->
+    <section class="banner" aria-roledescription="carrossel" aria-label="Destaques da VR Multimarcas">
+      <div class="banner__trilho" id="banner-trilho"></div>
+      <button type="button" class="banner__seta banner__seta--ant" id="banner-ant" aria-label="Banner anterior">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6" /></svg>
+      </button>
+      <button type="button" class="banner__seta banner__seta--prox" id="banner-prox" aria-label="Próximo banner">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" /></svg>
+      </button>
+      <div class="banner__pontos" id="banner-pontos"></div>
+    </section>
+
+    <!-- ===== Busca ===== -->
+    <div class="inicio-largura">
+      <form class="busca" id="busca" action="/motos">
+        <h1 class="busca__titulo">Encontre a moto que você precisa</h1>
+        <div class="busca__campos">
+          <label class="campo">
+            <span class="campo__rotulo">Marca</span>
+            <select id="busca-marca" name="marca"><option value="">Todas as marcas</option></select>
+          </label>
+          <label class="campo">
+            <span class="campo__rotulo">Modelo</span>
+            <select id="busca-modelo" name="modelo" disabled><option value="">Todos os modelos</option></select>
+          </label>
+          <button type="submit" class="busca__botao" id="busca-botao">Ver motos</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- ===== Marcas ===== -->
+    <section class="inicio-largura secao" aria-labelledby="t-marcas">
+      <h2 class="secao__titulo" id="t-marcas">Nossas marcas</h2>
+      <div class="marcas" id="marcas"></div>
+    </section>
+
+    <!-- ===== Motos por estilo ===== -->
+    <section class="inicio-largura secao" aria-labelledby="t-motos">
+      <div class="secao__cabecalho">
+        <h2 class="secao__titulo" id="t-motos">Motos 0 km na VR</h2>
+        <a class="secao__link" href="/motos">Ver todas</a>
+      </div>
+      <div class="estilos" id="estilos" role="tablist" aria-label="Filtrar por estilo"></div>
+      <div class="vitrine" id="vitrine"></div>
+    </section>
+
+    <!-- ===== Vantagens ===== -->
+    <section class="inicio-largura secao" aria-labelledby="t-vantagens">
+      <h2 class="secao__titulo" id="t-vantagens">Por que comprar na VR</h2>
+      <div class="vantagens">
+        <a class="vantagem" href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Quero%20simular%20um%20financiamento." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2" /><path d="M3 10h18M7 15h4" /></svg>
+          <h3>Financiamento facilitado</h3>
+          <p>Simule as parcelas direto com a gente pelo WhatsApp.</p>
+        </a>
+        <a class="vantagem" href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Quero%20saber%20sobre%20o%20capacete%20na%20compra%20da%20moto." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 15a8 8 0 0 1 16 0v2H4z" /><path d="M12 7v4h8" /><path d="M4 17h16" /></svg>
+          <h3>Capacete por nossa conta</h3>
+          <p>Saia da loja com a moto e o capacete.</p>
+        </a>
+        <a class="vantagem" href="/motos">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 17a3 3 0 1 0 0-.01M19 17a3 3 0 1 0 0-.01M8 17h5l3-6h-4l-2-3H7m9 3l3 6M14 6h2l1 2" /></svg>
+          <h3>Motos 0 km</h3>
+          <p>Shineray, Haojue e Honda novas, prontas para rodar.</p>
+        </a>
+        <a class="vantagem" href="https://www.google.com/maps/search/?api=1&query=Rua%20Almerinda%20da%20Costa%20Ribeiro%2C%2021%2C%20Canad%C3%A1%2C%20Contagem%20-%20MG" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-4.4-7-10a7 7 0 0 1 14 0c0 5.6-7 10-7 10z" /><circle cx="12" cy="11" r="2.5" /></svg>
+          <h3>Showroom em Contagem</h3>
+          <p>Rua Almerinda da Costa Ribeiro, 21 — Bairro Canadá.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== Faixa de financiamento ===== -->
+    <section class="inicio-largura secao">
+      <div class="faixa">
+        <div class="faixa__texto">
+          <h2>Sua moto 0 km com parcelas que cabem no bolso</h2>
+          <p>Mande uma mensagem e simule o financiamento sem sair de casa.</p>
+        </div>
+        <a class="faixa__botao" href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Quero%20simular%20um%20financiamento." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.7 11.7 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
+          Simular no WhatsApp
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Rodapé ===== -->
+  <footer class="rodape" id="contato">
+    <div class="rodape__conteudo">
+      <div class="rodape__marca-linha">
+        <a class="topo__marca" href="/"><img class="logo-vr" src="/modelos/catalogo/logo-vr.svg" alt="VR Multimarcas Contagem" width="230" height="30"></a>
+        <a class="rodape__topo" href="#">Topo ↑</a>
+      </div>
+      <hr>
+      <div class="rodape__colunas">
+        <div>
+          <h3>Motos</h3>
+          <a href="/motos?marca=SHINERAY">Shineray</a>
+          <a href="/motos?marca=HAOJUE">Haojue</a>
+          <a href="/motos?marca=HONDA">Honda</a>
+          <a href="/motos">Ver todas</a>
+        </div>
+        <div>
+          <h3>Na VR</h3>
+          <a href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Quero%20simular%20um%20financiamento." target="_blank" rel="noopener">Financiamento facilitado</a>
+          <a href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Quero%20saber%20sobre%20o%20capacete%20na%20compra%20da%20moto." target="_blank" rel="noopener">Capacete por nossa conta</a>
+          <a href="/motos">Motos 0 km</a>
+          <a href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Quero%20saber%20sobre%20patinetes%20el%C3%A9tricos%20e%20quadriciclos." target="_blank" rel="noopener">Patinetes e quadriciclos</a>
+        </div>
+        <div>
+          <h3>Contato</h3>
+          <a href="https://wa.me/5500000000000" target="_blank" rel="noopener">WhatsApp: (00) 00000-0000</a>
+          <a href="https://www.instagram.com/vrmultimarcas.contagem.oficial/" target="_blank" rel="noopener">Instagram: @vrmultimarcas.contagem.oficial</a>
+        </div>
+        <div>
+          <h3>Onde estamos</h3>
+          <a href="https://www.google.com/maps/search/?api=1&query=Rua%20Almerinda%20da%20Costa%20Ribeiro%2C%2021%2C%20Canad%C3%A1%2C%20Contagem%20-%20MG" target="_blank" rel="noopener">Rua Almerinda da Costa Ribeiro, 21 — Bairro Canadá</a>
+          <span>Contagem, MG</span>
+        </div>
+      </div>
+      <hr>
+      <p class="rodape__direitos">© 2026 VR Multimarcas • Contagem/MG • Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <script src="/modelos/catalogo/estoque.js"></script>
+  <script src="/modelos/inicio/inicio.js"></script>
+  <script src="/modelos/catalogo/menu.js"></script>
+</body>
+</html>

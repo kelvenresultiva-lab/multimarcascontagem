@@ -1,0 +1,283 @@
+/* Página inicial (no estilo da home da Webmotors, mais enxuta). Usa topo, rodapé e cards do catalogo.css. */
+
+:root { --dourado: #d6aa4a; --escuro-banner: #16151a; }
+
+.inicio-largura {
+  max-width: 1620px;
+  margin: 0 auto;
+  padding: 0 150px;
+}
+.secao { margin-top: 56px; }
+.secao__cabecalho { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
+.secao__titulo { margin: 0 0 20px; font-size: 24px; font-weight: 700; }
+.secao__link { color: #b3123a; font-size: 15px; font-weight: 700; text-decoration: none; }
+.secao__link:hover { text-decoration: underline; }
+
+/* ---------- Banner (hero) ---------- */
+.banner {
+  position: relative;
+  overflow: hidden;
+  background: var(--escuro-banner);
+  color: #fff;
+}
+/* as artes já trazem o texto e os botões; empilhadas no mesmo lugar, só a ativa aparece */
+.banner__trilho { display: grid; }
+.banner__slide {
+  position: relative;
+  grid-area: 1 / 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .6s ease, visibility .6s;
+}
+.banner__slide.ativo { opacity: 1; visibility: visible; }
+.banner__arte {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2000 / 672;
+  object-fit: cover;
+}
+/* áreas clicáveis invisíveis por cima dos botões desenhados na arte */
+.banner__area {
+  position: absolute;
+  z-index: 1;
+  border-radius: 10px;
+  color: transparent;
+  font-size: 0;
+}
+.banner__area:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+.banner__area--tudo { inset: 0; z-index: 0; border-radius: 0; }
+.banner__area--ver { left: 8.9%; width: 10.5%; top: 68.5%; height: 11%; }
+.banner__area--simular { left: 19.8%; width: 15.7%; top: 68.5%; height: 11%; }
+.banner__seta {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin-top: -22px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .85);
+  color: #2e2d37;
+  cursor: pointer;
+}
+.banner__seta:hover { background: #fff; }
+.banner__seta svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.banner__seta--ant { left: 20px; }
+.banner__seta--prox { right: 20px; }
+.banner__pontos {
+  position: absolute;
+  bottom: 56px;
+  left: 50%;
+  z-index: 2;
+  display: flex;
+  gap: 8px;
+  transform: translateX(-50%);
+}
+.banner__pontos button {
+  width: 26px;
+  height: 4px;
+  padding: 0;
+  border: 0;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, .35);
+  cursor: pointer;
+}
+.banner__pontos button[aria-current] { background: #fff; }
+.banner--unico .banner__seta, .banner--unico .banner__pontos { display: none; }
+
+/* ---------- Busca (sobe por cima do banner) ---------- */
+.busca {
+  position: relative;
+  z-index: 3;
+  margin-top: -40px;
+  padding: 22px 24px 24px;
+  border: 1px solid var(--borda);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(22, 21, 26, .12);
+}
+.busca__titulo { margin: 0 0 16px; font-size: 20px; font-weight: 700; }
+.busca__campos { display: grid; grid-template-columns: 1fr 1fr 220px; gap: 12px; align-items: stretch; }
+.busca .campo { margin: 0; }
+.busca__botao {
+  min-height: 56px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--escuro);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.busca__botao:hover { background: #000; }
+
+/* ---------- Marcas ---------- */
+.marcas { display: flex; flex-wrap: wrap; gap: 28px; }
+.marca {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 132px;
+  text-decoration: none;
+}
+.marca__circulo {
+  display: grid;
+  place-items: center;
+  width: 112px;
+  height: 112px;
+  margin-bottom: 8px;
+  border: 1px solid var(--borda);
+  border-radius: 50%;
+  background: #fff;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  transition: border-color .15s, box-shadow .15s;
+}
+.marca:hover .marca__circulo { border-color: var(--texto); box-shadow: 0 6px 18px rgba(46, 45, 55, .12); }
+.marca__circulo--shineray { color: #c8102e; }
+.marca__circulo--haojue { color: #1d3f8f; }
+.marca__circulo--honda { color: #cc0000; }
+.marca__nome { font-weight: 700; }
+.marca__qtd { color: var(--cinza); font-size: 14px; }
+
+/* ---------- Estilos e vitrine ---------- */
+.estilos { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+.estilo {
+  padding: 9px 18px;
+  border: 1px solid var(--borda);
+  border-radius: 999px;
+  background: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.estilo:hover { border-color: var(--texto); }
+.estilo[aria-selected="true"] { border-color: var(--escuro); background: var(--escuro); color: #fff; }
+.vitrine { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.vitrine .card__selos { display: flex; gap: 6px; margin-bottom: 8px; }
+.selo--estilo { background: var(--fundo-suave); color: var(--texto); }
+
+/* ---------- Vantagens ---------- */
+.vantagens { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.vantagem {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 22px;
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  background: var(--fundo-suave);
+  text-decoration: none;
+  transition: box-shadow .2s, transform .2s;
+}
+.vantagem:hover { box-shadow: 0 6px 24px rgba(46, 45, 55, .12); transform: translateY(-2px); }
+.vantagem svg {
+  width: 34px;
+  height: 34px;
+  margin-bottom: 8px;
+  fill: none;
+  stroke: #b3123a;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.vantagem h3 { margin: 0; font-size: 18px; }
+.vantagem p { margin: 0; color: var(--cinza); font-size: 15px; }
+
+/* ---------- Faixa de financiamento ---------- */
+.faixa {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 64px;
+  padding: 32px 40px;
+  border-radius: 16px;
+  background: linear-gradient(110deg, #b3123a 0%, #7d0c29 100%);
+  color: #fff;
+}
+.faixa h2 { margin: 0; font-size: 26px; line-height: 1.2; }
+.faixa p { margin: 8px 0 0; color: rgba(255, 255, 255, .85); }
+.faixa__botao {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 0 26px;
+  border-radius: 10px;
+  background: #fff;
+  color: #1b1a1f;
+  font-weight: 700;
+  text-decoration: none;
+}
+.faixa__botao svg { width: 22px; height: 22px; color: var(--whatsapp); }
+.faixa__botao:hover { background: #f1f1f4; }
+
+/* ================= Telas menores ================= */
+@media (max-width: 1400px) {
+  .inicio-largura { padding-left: 40px; padding-right: 40px; }
+}
+@media (max-width: 1150px) {
+  .vitrine, .vantagens { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* celular e tablet: arte vertical */
+@media (max-width: 860px) {
+  .inicio-largura { padding: 0 16px; }
+  .secao { margin-top: 40px; }
+  .secao__titulo { font-size: 21px; margin-bottom: 16px; }
+
+  .banner__arte { aspect-ratio: 941 / 1672; }
+  .banner__area--ver, .banner__area--simular { left: 10%; width: 80%; height: 5.4%; }
+  .banner__area--ver { top: var(--ver); }
+  .banner__area--simular { top: var(--sim); }
+  .banner__seta { top: 72%; width: 38px; height: 38px; margin-top: -19px; }
+  .banner__seta--ant { left: 10px; }
+  .banner__seta--prox { right: 10px; }
+  .banner__pontos { bottom: 54px; }
+
+  .busca { margin-top: -30px; padding: 18px 16px; }
+  .busca__titulo { font-size: 18px; }
+  .busca__campos { grid-template-columns: 1fr; }
+  .busca__botao { min-height: 52px; }
+
+  .marcas { gap: 12px; justify-content: space-between; }
+  .marca { width: calc((100% - 24px) / 3); }
+  .marca__circulo { width: 88px; height: 88px; font-size: 13px; }
+
+  .estilos { flex-wrap: nowrap; overflow-x: auto; margin: 0 -16px 16px; padding: 0 16px; scrollbar-width: none; }
+  .estilos::-webkit-scrollbar { display: none; }
+  .estilo { flex: none; }
+  /* vitrine em faixa que arrasta para o lado, como na Webmotors */
+  .vitrine {
+    display: flex;
+    gap: 12px;
+    margin: 0 -16px;
+    padding: 0 16px 6px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 16px;
+    scrollbar-width: none;
+  }
+  .vitrine::-webkit-scrollbar { display: none; }
+  .vitrine .card { flex: 0 0 78%; scroll-snap-align: start; }
+
+  .vantagens { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .vantagem { padding: 16px; }
+  .vantagem h3 { font-size: 16px; }
+  .vantagem p { font-size: 14px; }
+
+  .faixa { flex-direction: column; align-items: stretch; margin-bottom: 40px; padding: 24px 20px; }
+  .faixa h2 { font-size: 21px; }
+  .faixa__botao { justify-content: center; }
+}
+@media (max-width: 380px) {
+  .vantagens { grid-template-columns: 1fr; }
+}
