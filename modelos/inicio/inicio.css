@@ -458,3 +458,18 @@
   .banner__area.banner__area--consultor:hover,
   .banner__area.banner__area--simular:hover { transform: none; }
 }
+
+/* ---------- Tipografia dos botões do banner: mesmo padrão dos botões do site (Figtree 700, 15–18 px) ---------- */
+.banner__area.banner__area--consultor,
+.banner__area.banner__area--simular {
+  font-family: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: clamp(13px, 1.05vw, 18px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: .005em;
+  -webkit-font-smoothing: antialiased;
+}
+@media (max-width: 860px) {
+  .banner__area.banner__area--consultor,
+  .banner__area.banner__area--simular { font-size: clamp(14px, 4vw, 16px); }
+}
