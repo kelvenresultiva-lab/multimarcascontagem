@@ -129,3 +129,4 @@ html.menu-aberto, html.menu-aberto body { overflow: hidden !important; }
 
 /* logo da VR no painel do menu */
 .menu-painel__marca .logo-vr { display: block; width: auto; height: 30px; }
+.menu-painel__sac { font-weight: 600; }

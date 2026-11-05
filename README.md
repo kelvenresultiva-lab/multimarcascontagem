@@ -12,6 +12,8 @@ Para adicionar uma moto: criar a pasta de fotos com o slug e acrescentar o bloco
 
 WhatsApp e telefone da loja: (31) 2118-5662.
 
+Pós-venda: oficina credenciada LSE Motos (R. Mte. Pedrinho, 35 — Nossa Sra. do Carmo, Contagem/MG, tel. (31) 98456-8694), SAC só WhatsApp (48) 99161-1671 e 1ª revisão com 1.000 km ou 3 meses. Aparecem na seção `#pos-venda` da página inicial, na coluna "Pós-venda" do rodapé e no menu.
+
 Simular financiamento: todo link do WhatsApp cuja mensagem fala em "simular" abre antes um formulário (nome, CPF, telefone e e-mail) em `modelos/catalogo/financiamento.js` e `.css`; ao enviar, o WhatsApp abre com esses dados e a moto. Nada fica guardado no site. A foto da prévia de links (WhatsApp, Instagram) é `modelos/catalogo/compartilhar.jpg`, com endereço absoluto em `https://multimarcascontagem.vercel.app` nas etiquetas `og:image`; se o domínio mudar, trocar nas três páginas.
 
 Site estático: não precisa de build. Basta servir a pasta (ex.: Vercel).

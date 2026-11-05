@@ -281,3 +281,72 @@
 @media (max-width: 380px) {
   .vantagens { grid-template-columns: 1fr; }
 }
+
+/* ---------- Pós-venda: revisão, oficina credenciada e SAC ---------- */
+.pos {
+  padding: 36px 40px;
+  border-radius: 16px;
+  background: var(--escuro-banner);
+  color: #fff;
+}
+.pos__cabeca { max-width: 720px; }
+.pos__selo {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--dourado);
+  color: #16151a;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.pos__cabeca h2 { margin: 12px 0 0; font-size: 26px; line-height: 1.2; }
+.pos__cabeca p { margin: 10px 0 0; color: rgba(255, 255, 255, .78); line-height: 1.5; }
+.pos__itens {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 28px;
+}
+.pos__item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 22px;
+  border: 1px solid rgba(214, 170, 74, .35);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, .04);
+}
+.pos__icone {
+  width: 40px; height: 40px;
+  margin-bottom: 6px;
+  fill: none; stroke: var(--dourado); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round;
+}
+.pos__item h3 { margin: 0; color: rgba(255, 255, 255, .7); font-size: 14px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+.pos__item p { margin: 0; color: rgba(255, 255, 255, .78); font-size: 15px; line-height: 1.45; }
+.pos__item .pos__destaque { color: var(--dourado); font-size: 20px; font-weight: 800; line-height: 1.25; }
+.pos__botoes { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 12px; }
+.pos__botao {
+  display: inline-flex; align-items: center; gap: 8px;
+  min-height: 44px;
+  padding: 0 16px;
+  border: 1px solid rgba(255, 255, 255, .3);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.pos__botao:hover { background: rgba(255, 255, 255, .08); }
+.pos__botao--whats { border-color: var(--dourado); background: var(--dourado); color: #16151a; }
+.pos__botao--whats:hover { background: #e3bb62; }
+.pos__botao svg { width: 20px; height: 20px; }
+@media (max-width: 1100px) {
+  .pos__itens { grid-template-columns: 1fr; }
+}
+@media (max-width: 860px) {
+  .pos { padding: 24px 18px; }
+  .pos__cabeca h2 { font-size: 22px; }
+}
+#pos-venda { scroll-margin-top: 100px; } /* o topo fica preso na tela */

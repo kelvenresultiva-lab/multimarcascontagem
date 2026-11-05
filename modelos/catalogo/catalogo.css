@@ -444,12 +444,13 @@ img { display: block; max-width: 100%; }
 .rodape__topo { font-size: 15px; font-weight: 600; text-decoration: none; }
 .rodape__colunas {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr)); /* Motos, Na VR, Contato, Pós-venda, Onde estamos */
   gap: 32px;
 }
 .rodape__colunas h3 { margin: 0 0 16px; font-size: 16px; font-weight: 700; }
 .rodape__colunas a,
 .rodape__colunas span {
+  overflow-wrap: anywhere;
   display: block;
   margin-bottom: 12px;
   font-size: 15px;
@@ -682,3 +683,8 @@ img { display: block; max-width: 100%; }
 .logo-vr { display: block; width: auto; height: 36px; }
 @media (max-width: 860px) { .logo-vr { height: 30px; } }
 @media (max-width: 340px) { .logo-vr { height: 24px; } }
+
+/* rodapé com 5 colunas: em telas médias vira 3 por linha */
+@media (min-width: 861px) and (max-width: 1100px) {
+  .rodape__colunas { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
