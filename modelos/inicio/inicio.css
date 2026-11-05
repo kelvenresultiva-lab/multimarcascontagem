@@ -283,26 +283,43 @@
 }
 
 /* ---------- Pós-venda: revisão, oficina credenciada e SAC ---------- */
+/* mesmo formato da faixa vermelha de financiamento, com o degradê dourado da logo (#f6cd5c → #e0ad3a → #b8861f) */
 .pos {
+  position: relative;
+  overflow: hidden;
   padding: 36px 40px;
   border-radius: 16px;
-  background: var(--escuro-banner);
-  color: #fff;
+  background: linear-gradient(110deg, #f6cd5c 0%, #e0ad3a 48%, #b8861f 100%);
+  color: #16151a;
 }
+/* o "V" da logo, grande e bem claro no canto, para ligar o card à marca */
+.pos::before {
+  content: "";
+  position: absolute;
+  right: -40px;
+  top: -30px;
+  width: 340px;
+  height: 340px;
+  background: url("/modelos/catalogo/simbolo-vr.svg") no-repeat center / contain;
+  opacity: .12;
+  filter: brightness(0);
+  pointer-events: none;
+}
+.pos > * { position: relative; }
 .pos__cabeca { max-width: 720px; }
 .pos__selo {
   display: inline-block;
   padding: 4px 12px;
   border-radius: 999px;
-  background: var(--dourado);
-  color: #16151a;
+  background: #16151a;
+  color: #f6cd5c;
   font-size: 13px;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: .04em;
   text-transform: uppercase;
 }
 .pos__cabeca h2 { margin: 12px 0 0; font-size: 26px; line-height: 1.2; }
-.pos__cabeca p { margin: 10px 0 0; color: rgba(255, 255, 255, .78); line-height: 1.5; }
+.pos__cabeca p { margin: 8px 0 0; color: rgba(22, 21, 26, .78); line-height: 1.5; }
 .pos__itens {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -314,39 +331,43 @@
   flex-direction: column;
   gap: 6px;
   padding: 22px;
-  border: 1px solid rgba(214, 170, 74, .35);
+  border: 1px solid rgba(255, 255, 255, .45);
   border-radius: 12px;
-  background: rgba(255, 255, 255, .04);
+  background: rgba(255, 255, 255, .28);
 }
 .pos__icone {
   width: 40px; height: 40px;
   margin-bottom: 6px;
-  fill: none; stroke: var(--dourado); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round;
+  fill: none; stroke: #16151a; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round;
 }
-.pos__item h3 { margin: 0; color: rgba(255, 255, 255, .7); font-size: 14px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
-.pos__item p { margin: 0; color: rgba(255, 255, 255, .78); font-size: 15px; line-height: 1.45; }
-.pos__item .pos__destaque { color: var(--dourado); font-size: 20px; font-weight: 800; line-height: 1.25; }
+.pos__item h3 { margin: 0; color: rgba(22, 21, 26, .7); font-size: 14px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+.pos__item p { margin: 0; color: rgba(22, 21, 26, .8); font-size: 15px; line-height: 1.45; }
+.pos__item .pos__destaque { color: #16151a; font-size: 20px; font-weight: 800; line-height: 1.25; }
 .pos__botoes { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 12px; }
 .pos__botao {
   display: inline-flex; align-items: center; gap: 8px;
   min-height: 44px;
   padding: 0 16px;
-  border: 1px solid rgba(255, 255, 255, .3);
+  border: 1px solid rgba(22, 21, 26, .35);
   border-radius: 10px;
-  color: #fff;
+  color: #16151a;
   font-size: 15px;
   font-weight: 700;
   text-decoration: none;
+  transition: background .15s ease;
 }
-.pos__botao:hover { background: rgba(255, 255, 255, .08); }
-.pos__botao--whats { border-color: var(--dourado); background: var(--dourado); color: #16151a; }
-.pos__botao--whats:hover { background: #e3bb62; }
+.pos__botao:hover { background: rgba(22, 21, 26, .08); }
+/* SAC: igual ao botão branco da faixa de financiamento, com o ícone verde do WhatsApp */
+.pos__botao--whats { border-color: #fff; background: #fff; color: #1b1a1f; }
+.pos__botao--whats:hover { background: #f1f1f4; }
+.pos__botao--whats svg { color: var(--whatsapp); }
 .pos__botao svg { width: 20px; height: 20px; }
 @media (max-width: 1100px) {
   .pos__itens { grid-template-columns: 1fr; }
 }
 @media (max-width: 860px) {
   .pos { padding: 24px 18px; }
+  .pos::before { width: 220px; height: 220px; right: -50px; top: -20px; }
   .pos__cabeca h2 { font-size: 22px; }
 }
 #pos-venda { scroll-margin-top: 100px; } /* o topo fica preso na tela */
