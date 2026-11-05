@@ -2,7 +2,7 @@
 (function () {
   const naPaginaDoCarro = !!document.querySelector(".DetailCarousel"); // a página do carro abre em /<slug>
   const BASE = "/motos"; // catálogo (a página inicial fica em /)
-  const WHATS = "5531921185662"; // WhatsApp da VR: (31) 92118-5662
+  const WHATS = "553121185662"; // WhatsApp da VR: (31) 2118-5662
   const wa = (msg) => `https://wa.me/${WHATS}?text=${encodeURIComponent(msg)}`;
 
   const SECOES = [

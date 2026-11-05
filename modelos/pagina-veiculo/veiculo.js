@@ -4,8 +4,8 @@
   if (!estoque.length) return;
 
   const CIDADE = "Contagem - MG";
-  const WHATS = "5531921185662"; // WhatsApp da VR: (31) 92118-5662
-  const TELEFONE = "tel:+5531921185662";
+  const WHATS = "553121185662"; // WhatsApp da VR: (31) 2118-5662
+  const TELEFONE = "tel:+553121185662";
   const FOTOS = "/modelos/catalogo/fotos/";
 
   // endereço /toyota-hilux-srx-2019 (ou o antigo ?carro=toyota-hilux-srx-2019)
@@ -251,7 +251,7 @@
             ? `<a class="card-preco__secundario" href="/motos">Ver estoque</a>`
             : `<a class="card-preco__secundario" href="${linkW(msgParcelas)}" target="_blank" rel="noopener">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="M3 10h18M7 15h4" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>Simular parcelas</a>`}
-          <a class="card-preco__secundario" href="${TELEFONE}" aria-label="Ligar para a loja: (31) 92118-5662">
+          <a class="card-preco__secundario" href="${TELEFONE}" aria-label="Ligar para a loja: (31) 2118-5662">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.5l2.6 4-1.8 1.9a12 12 0 0 0 7.2 7.2l1.9-1.8 4 2.6-1.1 3.1c-.3.8-1.1 1.3-2 1.2C9.6 20.9 3.1 14.4 2.3 6.6c-.1-.9.4-1.7 1.2-2z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></svg>Falar agora</a>
         </div>
         <ul class="card-preco__vantagens">
@@ -360,7 +360,7 @@
     ${v.vendido
       ? `<a class="barra-acoes__secundario" href="/motos">Ver estoque</a>`
       : `<a class="barra-acoes__secundario" href="${linkWhats(msgParcelas)}" target="_blank" rel="noopener">Ver parcelas</a>`}
-    <a class="barra-acoes__ligar" href="${TELEFONE}" aria-label="Ligar para a loja: (31) 92118-5662">
+    <a class="barra-acoes__ligar" href="${TELEFONE}" aria-label="Ligar para a loja: (31) 2118-5662">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.5l2.6 4-1.8 1.9a12 12 0 0 0 7.2 7.2l1.9-1.8 4 2.6-1.1 3.1c-.3.8-1.1 1.3-2 1.2C9.6 20.9 3.1 14.4 2.3 6.6c-.1-.9.4-1.7 1.2-2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
     </a>
     <a class="barra-acoes__principal" href="https://wa.me/${WHATS}?text=${texto}" target="_blank" rel="noopener">${v.vendido ? "Quero um parecido" : "Enviar mensagem"}</a>

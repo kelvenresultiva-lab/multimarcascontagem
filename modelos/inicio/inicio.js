@@ -1,7 +1,7 @@
 // Página inicial: banners, busca, marcas e vitrine por estilo, montados a partir do window.ESTOQUE.
 (function () {
   const $ = (id) => document.getElementById(id);
-  const WHATS = "5531921185662"; // WhatsApp da VR: (31) 92118-5662
+  const WHATS = "553121185662"; // WhatsApp da VR: (31) 2118-5662
   const wa = (msg) => `https://wa.me/${WHATS}?text=${encodeURIComponent(msg)}`;
   const ESTOQUE = (window.ESTOQUE || []).filter((v) => !v.vendido);
   const titulo = (t) => String(t).toLowerCase().replace(/(^|[\s(/-])(\p{L})/gu, (m, a, b) => a + b.toUpperCase()).replace(/(\d)Cc\b/g, "$1cc");
