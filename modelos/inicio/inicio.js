@@ -10,6 +10,7 @@
   // invisíveis. No computador os botões estão no mesmo lugar em todas as artes; no celular a altura muda um pouco,
   // então cada arte guarda o topo (em % da altura) do "Ver detalhes" e do "Simular financiamento".
   // O "Simular financiamento" da arte é só um contorno: por cima dele vai um botão de verdade (branco), do mesmo tamanho.
+  // Por cima do "Ver detalhes" dourado vai o "Falar com consultor" (WhatsApp); os detalhes abrem clicando no resto do banner.
   // celX = onde os botões começam e terminam na arte do celular (%); pc = topo dos botões na arte do computador (%).
   const BANNERS = [
     { slug: "honda-pcx-2027", cel: [33.7, 40.2], celX: [11.9, 88], pc: 69.7 },
@@ -39,8 +40,8 @@
           <source media="(max-width: 860px)" srcset="${arte}-celular.webp">
           <img class="banner__arte" src="${arte}-${b.soCelular ? "celular" : "computador"}.webp" alt="${nome} 0 km no showroom da VR Multimarcas, com financiamento facilitado e capacete por nossa conta"${i ? ' loading="lazy"' : ' fetchpriority="high"'}>
         </picture>
-        <a class="banner__area banner__area--tudo" href="${b.v.link}" tabindex="-1" aria-hidden="true"></a>
-        <a class="banner__area banner__area--ver" href="${b.v.link}">Ver detalhes da ${nome}</a>
+        <a class="banner__area banner__area--tudo" href="${b.v.link}">Ver detalhes da ${nome}</a>
+        <a class="banner__area banner__area--ver banner__area--consultor" href="${wa(`Olá, VR Multimarcas! Vi a ${titulo(b.v.marca)} ${b.v.modelo} 0 km no site e quero falar com um consultor.\n${location.origin}${b.v.link}`)}" target="_blank" rel="noopener">Falar com consultor<span class="so-leitor"> sobre a ${nome}</span></a>
         <a class="banner__area banner__area--simular" href="${wa(`Olá, VR Multimarcas! Quero simular o financiamento da ${titulo(b.v.marca)} ${b.v.modelo} 0 km que vi no site. Qual a entrada e o valor das parcelas?\n${location.origin}${b.v.link}`)}" target="_blank" rel="noopener">Simular financiamento<span class="so-leitor"> da ${nome}</span></a>
       </article>`;
     }).join("");
@@ -149,12 +150,4 @@
     mostrar(b.textContent);
   });
   mostrar("Todas");
-
-  // ---------- Fale com nosso consultor ----------
-  // no celular, o botão fixo some enquanto o botão da busca está na tela (para não aparecerem dois iguais)
-  const flutuante = document.querySelector(".consultor-flutuante");
-  if (flutuante && "IntersectionObserver" in window) {
-    new IntersectionObserver(([e]) => flutuante.classList.toggle("consultor-flutuante--escondido", e.isIntersecting))
-      .observe($("consultor"));
-  }
 })();
