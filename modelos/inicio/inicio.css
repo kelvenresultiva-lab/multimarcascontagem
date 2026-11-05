@@ -199,9 +199,11 @@
   margin-bottom: 64px;
   padding: 32px 40px;
   border-radius: 16px;
-  background: linear-gradient(110deg, #f5891f 0%, #e5700f 50%, #c9560a 100%); /* mesmo laranja do pós-venda */
+  background: linear-gradient(110deg, #f6a92a 0%, #ec8a1a 50%, #d2690f 100%); /* mesmo laranja do pós-venda */
   color: #fff;
 }
+.faixa, .pos__cabeca { text-shadow: 0 1px 2px rgba(110, 50, 0, .25); }
+.pos__selo, .faixa__botao { text-shadow: none; }
 .faixa h2 { margin: 0; font-size: 26px; line-height: 1.2; }
 .faixa p { margin: 8px 0 0; color: rgba(255, 255, 255, .85); }
 .faixa__botao {
@@ -289,7 +291,7 @@
   overflow: hidden;
   padding: 36px 40px;
   border-radius: 16px;
-  background: linear-gradient(110deg, #f5891f 0%, #e5700f 50%, #c9560a 100%);
+  background: linear-gradient(110deg, #f6a92a 0%, #ec8a1a 50%, #d2690f 100%);
   color: #fff;
 }
 /* símbolo VR da logo, grande e bem suave no canto */
@@ -312,7 +314,7 @@
   padding: 4px 12px;
   border-radius: 999px;
   background: #fff;
-  color: #c9560a;
+  color: #d2690f;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: .04em;
@@ -339,7 +341,7 @@
 .pos__icone {
   width: 40px; height: 40px;
   margin-bottom: 6px;
-  fill: none; stroke: #e5700f; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round;
+  fill: none; stroke: #e3801a; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round;
 }
 .pos__item h3 { margin: 0; color: var(--cinza); font-size: 14px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
 .pos__item p { margin: 0; color: var(--cinza); font-size: 15px; line-height: 1.45; }
