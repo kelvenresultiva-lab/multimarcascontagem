@@ -1,0 +1,82 @@
+/* Formulário "Simular financiamento" (financiamento.js), usado na página inicial, no catálogo e na página da moto. */
+html.fin-aberto { overflow: hidden; }
+
+.fin {
+  width: min(440px, calc(100% - 32px));
+  max-height: calc(100% - 32px);
+  margin: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 16px;
+  background: #fff;
+  color: #2e2d37;
+  font-family: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  box-shadow: 0 24px 60px rgba(20, 18, 30, .3);
+  overflow: auto;
+}
+.fin::backdrop { background: rgba(20, 18, 30, .6); }
+.fin[open] { animation: fin-entrar .2s ease-out; }
+@keyframes fin-entrar { from { opacity: 0; transform: translateY(12px); } }
+@media (prefers-reduced-motion: reduce) { .fin[open] { animation: none; } }
+
+.fin__caixa { position: relative; display: grid; gap: 14px; padding: 28px 24px 22px; }
+.fin__fechar {
+  position: absolute; top: 12px; right: 12px;
+  display: grid; place-items: center;
+  width: 40px; height: 40px;
+  border: 0; border-radius: 50%;
+  background: transparent; color: #5c5c6b; cursor: pointer;
+}
+.fin__fechar:hover { background: #ecedf2; }
+.fin__fechar svg { width: 22px; height: 22px; }
+
+.fin__titulo { margin: 0; padding-right: 40px; font-size: 22px; font-weight: 800; line-height: 1.2; }
+.fin__moto {
+  justify-self: start;
+  margin: -4px 0 0;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #fbe9ee;
+  color: #b3123a;
+  font-size: 14px;
+  font-weight: 700;
+}
+.fin__texto { margin: 0; color: #5c5c6b; font-size: 15px; line-height: 1.45; }
+
+.fin__campo { display: grid; gap: 6px; }
+.fin__campo[hidden] { display: none; }
+.fin__campo span { font-size: 14px; font-weight: 700; }
+.fin__campo input,
+.fin__campo select {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 14px;
+  border: 1px solid #cfcfd8;
+  border-radius: 10px;
+  background: #fff;
+  color: inherit;
+  font: inherit;
+  font-size: 16px; /* 16px evita o zoom automático do iPhone */
+}
+.fin__campo input:focus,
+.fin__campo select:focus { outline: 2px solid #b3123a; outline-offset: 1px; border-color: #b3123a; }
+.fin__erro { display: none; color: #b3123a; font-size: 13px; font-weight: 600; }
+.fin__campo--erro input { border-color: #b3123a; }
+.fin__campo--erro .fin__erro { display: block; }
+
+.fin__enviar {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  min-height: 52px;
+  margin-top: 4px;
+  border: 0; border-radius: 10px;
+  background: #1fa855; color: #fff;
+  font: inherit; font-size: 16px; font-weight: 700;
+  cursor: pointer;
+}
+.fin__enviar:hover { background: #198f48; }
+.fin__enviar svg { width: 22px; height: 22px; }
+.fin__aviso { margin: 0; color: #8a8a99; font-size: 13px; line-height: 1.4; text-align: center; }
+
+@media (max-width: 480px) {
+  .fin__caixa { padding: 24px 18px 18px; gap: 12px; }
+}

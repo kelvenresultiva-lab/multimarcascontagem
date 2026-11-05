@@ -10,6 +10,8 @@ Site da VR Multimarcas (Contagem/MG), loja de motos 0 km Shineray, Haojue e Hond
 
 Para adicionar uma moto: criar a pasta de fotos com o slug e acrescentar o bloco dela em `modelos/catalogo/estoque.js`.
 
-WhatsApp e telefone da loja: (31) 2118-5662. A foto da prévia de links (WhatsApp, Instagram) é `modelos/catalogo/compartilhar.jpg`, com endereço absoluto em `https://multimarcascontagem.vercel.app` nas etiquetas `og:image`; se o domínio mudar, trocar nas três páginas.
+WhatsApp e telefone da loja: (31) 2118-5662.
+
+Simular financiamento: todo link do WhatsApp cuja mensagem fala em "simular" abre antes um formulário (nome, CPF, telefone e e-mail) em `modelos/catalogo/financiamento.js` e `.css`; ao enviar, o WhatsApp abre com esses dados e a moto. Nada fica guardado no site. A foto da prévia de links (WhatsApp, Instagram) é `modelos/catalogo/compartilhar.jpg`, com endereço absoluto em `https://multimarcascontagem.vercel.app` nas etiquetas `og:image`; se o domínio mudar, trocar nas três páginas.
 
 Site estático: não precisa de build. Basta servir a pasta (ex.: Vercel).
