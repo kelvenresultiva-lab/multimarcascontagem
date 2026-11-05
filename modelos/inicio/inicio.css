@@ -199,7 +199,7 @@
   margin-bottom: 64px;
   padding: 32px 40px;
   border-radius: 16px;
-  background: linear-gradient(110deg, #b3123a 0%, #7d0c29 100%);
+  background: linear-gradient(110deg, #f5891f 0%, #e5700f 50%, #c9560a 100%); /* mesmo laranja do pós-venda */
   color: #fff;
 }
 .faixa h2 { margin: 0; font-size: 26px; line-height: 1.2; }
