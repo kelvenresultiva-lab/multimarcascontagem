@@ -9,16 +9,18 @@
   // Os botões "Ver detalhes" e "Simular financiamento" fazem parte da arte; por cima deles ficam áreas clicáveis
   // invisíveis. No computador os botões estão no mesmo lugar em todas as artes; no celular a altura muda um pouco,
   // então cada arte guarda o topo (em % da altura) do "Ver detalhes" e do "Simular financiamento".
+  // O "Simular financiamento" da arte é só um contorno: por cima dele vai um botão de verdade (branco), do mesmo tamanho.
+  // celX = onde os botões começam e terminam na arte do celular (%); pc = topo dos botões na arte do computador (%).
   const BANNERS = [
-    { slug: "honda-pcx-2027", cel: [33.7, 40.2] },
-    { slug: "haojue-dr-160", cel: [30.9, 36.7] },
-    { slug: "shineray-shi-175", cel: [32.4, 39.0] },
-    { slug: "shineray-jef-150", cel: [31.2, 37.9] },
-    { slug: "shineray-urban-150", cel: [31.6, 37.8] },
-    { slug: "shineray-new-jet-125", cel: [31.3, 36.8] },
-    { slug: "honda-biz-125", cel: [31.3, 37.5] },
-    { slug: "shineray-jet-50", cel: [30.7, 36.5] },
-    { slug: "shineray-storm-200", cel: [34.9, 41.7], soCelular: true }, // ainda sem arte para computador
+    { slug: "honda-pcx-2027", cel: [33.7, 40.2], celX: [11.9, 88], pc: 69.7 },
+    { slug: "haojue-dr-160", cel: [30.9, 36.7], celX: [15.6, 84.4], pc: 68.9 },
+    { slug: "shineray-shi-175", cel: [32.4, 39.0], celX: [14.9, 84.9], pc: 68.6 },
+    { slug: "shineray-jef-150", cel: [31.2, 37.9], celX: [13.6, 86.2], pc: 68.2 },
+    { slug: "shineray-urban-150", cel: [31.6, 37.8], celX: [16.5, 83.6], pc: 69.5 },
+    { slug: "shineray-new-jet-125", cel: [31.3, 36.8], celX: [12.4, 87.9], pc: 69.1 },
+    { slug: "honda-biz-125", cel: [31.3, 37.5], celX: [16.3, 83.6], pc: 67.8 },
+    { slug: "shineray-jet-50", cel: [30.7, 36.5], celX: [14.7, 85.2], pc: 69.6 },
+    { slug: "shineray-storm-200", cel: [34.9, 41.7], celX: [9.3, 90.7], soCelular: true }, // ainda sem arte para computador
   ].map((b) => ({ ...b, v: ESTOQUE.find((v) => v.slug === b.slug) })).filter((b) => b.v);
   const celular = matchMedia("(max-width: 860px)");
   const trilho = $("banner-trilho");
@@ -30,15 +32,16 @@
       const nome = `${titulo(b.v.marca)} ${titulo(b.v.modelo)}`;
       const arte = `/modelos/inicio/banners/${b.slug}`;
       const [ver, sim] = b.cel;
+      const [esq, dir] = b.celX;
       return `
-      <article class="banner__slide${i === 0 ? " ativo" : ""}" aria-roledescription="slide" aria-label="${nome}, ${i + 1} de ${lista.length}"${i ? ' aria-hidden="true"' : ""} style="--ver:${ver}%;--sim:${sim}%">
+      <article class="banner__slide${i === 0 ? " ativo" : ""}" aria-roledescription="slide" aria-label="${nome}, ${i + 1} de ${lista.length}"${i ? ' aria-hidden="true"' : ""} style="--ver:${ver}%;--sim:${sim}%;--cel-esq:${esq}%;--cel-larg:${(dir - esq).toFixed(1)}%;--pc-topo:${b.pc || 69}%">
         <picture>
           <source media="(max-width: 860px)" srcset="${arte}-celular.webp">
           <img class="banner__arte" src="${arte}-${b.soCelular ? "celular" : "computador"}.webp" alt="${nome} 0 km no showroom da VR Multimarcas, com financiamento facilitado e capacete por nossa conta"${i ? ' loading="lazy"' : ' fetchpriority="high"'}>
         </picture>
         <a class="banner__area banner__area--tudo" href="${b.v.link}" tabindex="-1" aria-hidden="true"></a>
         <a class="banner__area banner__area--ver" href="${b.v.link}">Ver detalhes da ${nome}</a>
-        <a class="banner__area banner__area--simular" href="${wa(`Olá, VR Multimarcas! Quero simular o financiamento da ${titulo(b.v.marca)} ${b.v.modelo} 0 km que vi no site. Qual a entrada e o valor das parcelas?\n${location.origin}${b.v.link}`)}" target="_blank" rel="noopener">Simular financiamento da ${nome}</a>
+        <a class="banner__area banner__area--simular" href="${wa(`Olá, VR Multimarcas! Quero simular o financiamento da ${titulo(b.v.marca)} ${b.v.modelo} 0 km que vi no site. Qual a entrada e o valor das parcelas?\n${location.origin}${b.v.link}`)}" target="_blank" rel="noopener">Simular financiamento<span class="so-leitor"> da ${nome}</span></a>
       </article>`;
     }).join("");
     slides = [...trilho.children];

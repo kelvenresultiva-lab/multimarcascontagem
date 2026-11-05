@@ -402,3 +402,36 @@
 }
 .consultor-flutuante { transition: opacity .2s ease, transform .2s ease; }
 .consultor-flutuante--escondido { opacity: 0; transform: translateY(12px); pointer-events: none; }
+
+/* ---------- "Simular financiamento" do banner: botão de verdade por cima do contorno desenhado na arte ---------- */
+.so-leitor { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.banner__area.banner__area--simular {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 19.6%;
+  width: 16.6%;
+  top: calc(var(--pc-topo) - .3%);
+  height: 10.5%;
+  border-radius: .55vw;
+  background: #fff;
+  color: #16151a;
+  font-size: clamp(11px, 1.22vw, 24px);
+  font-family: inherit;
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .35);
+  transition: background .15s ease, transform .15s ease;
+}
+.banner__area.banner__area--simular:hover { background: #f1f1f4; transform: translateY(-1px); }
+@media (max-width: 860px) {
+  .banner__area.banner__area--simular {
+    left: calc(var(--cel-esq) - .6%);
+    width: calc(var(--cel-larg) + 1.2%);
+    top: calc(var(--sim) - .4%);
+    height: 6%;
+    border-radius: 1.6vw;
+    font-size: 4.1vw;
+  }
+}
