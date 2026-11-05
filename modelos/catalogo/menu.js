@@ -12,7 +12,7 @@
     ["Haojue", `${BASE}?marca=HAOJUE`, '<path d="M4 6h16M4 12h16M4 18h10" />'],
     ["Honda", `${BASE}?marca=HONDA`, '<path d="M4 6h16M4 12h16M4 18h10" />'],
     ["Financiamento", wa(`Olá, VR Multimarcas! Vim pelo site e quero simular o financiamento de uma moto 0 km. Pode me passar as condições?\n${location.origin}/motos`), '<rect x="3" y="6" width="18" height="13" rx="2" /><path d="M3 10h18M7 15h4" />', true],
-    ["Como chegar", "https://www.google.com/maps/search/?api=1&query=Rua%20Almerinda%20da%20Costa%20Ribeiro%2C%2021%2C%20Canad%C3%A1%2C%20Contagem%20-%20MG", '<path d="M12 21s-7-4.4-7-10a7 7 0 0 1 14 0c0 5.6-7 10-7 10z" /><circle cx="12" cy="11" r="2.5" />', true],
+    ["Como chegar", "https://www.google.com/maps/place/VR+MULTIMARCAS+-+CONTAGEM/@-19.9241171,-44.0934438,17z/data=!3m1!4b1!4m6!3m5!1s0xa6959866432ac3:0x6a13c56bbc2e944d!8m2!3d-19.9241171!4d-44.0908689!16s%2Fg%2F11z6pbhwns", '<path d="M12 21s-7-4.4-7-10a7 7 0 0 1 14 0c0 5.6-7 10-7 10z" /><circle cx="12" cy="11" r="2.5" />', true],
     ["Contato", "#contato", '<path d="M6.6 3.5l2.6 4-1.8 1.9a12 12 0 0 0 7.2 7.2l1.9-1.8 4 2.6-1.1 3.1c-.3.8-1.1 1.3-2 1.2C9.6 20.9 3.1 14.4 2.3 6.6c-.1-.9.4-1.7 1.2-2z" />'],
   ];
 
@@ -50,7 +50,7 @@
       </nav>
       <div class="menu-painel__contato">
         <a class="menu-painel__whats" href="${wa(`Olá, VR Multimarcas! Vim pelo site e quero saber mais sobre as motos 0 km. Pode me ajudar?\n${location.origin}/motos`)}" target="_blank" rel="noopener">Chamar no WhatsApp</a>
-        <a class="menu-painel__ligar" href="https://www.google.com/maps/search/?api=1&query=Rua%20Almerinda%20da%20Costa%20Ribeiro%2C%2021%2C%20Canad%C3%A1%2C%20Contagem%20-%20MG" target="_blank" rel="noopener">Rua Almerinda da Costa Ribeiro, 21 — Bairro Canadá</a>
+        <a class="menu-painel__ligar" href="https://www.google.com/maps/place/VR+MULTIMARCAS+-+CONTAGEM/@-19.9241171,-44.0934438,17z/data=!3m1!4b1!4m6!3m5!1s0xa6959866432ac3:0x6a13c56bbc2e944d!8m2!3d-19.9241171!4d-44.0908689!16s%2Fg%2F11z6pbhwns" target="_blank" rel="noopener">Rua Almerinda da Costa Ribeiro, 21 — Bairro Canadá</a>
         <a class="menu-painel__insta" href="https://www.instagram.com/vrmultimarcas.contagem.oficial/" target="_blank" rel="noopener">Instagram @vrmultimarcas.contagem.oficial</a>
         <p>Contagem, MG</p>
       </div>
