@@ -350,3 +350,55 @@
   .pos__cabeca h2 { font-size: 22px; }
 }
 #pos-venda { scroll-margin-top: 100px; } /* o topo fica preso na tela */
+
+/* ---------- CTA: Fale com nosso consultor ---------- */
+.busca__topo { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
+.busca__topo .busca__titulo { margin: 0; }
+.consultor {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: 12px;
+  min-height: 56px;
+  padding: 8px 22px 8px 16px;
+  border-radius: 999px;
+  background: var(--whatsapp);
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(31, 168, 85, .35);
+  transition: transform .15s ease, background .15s ease;
+}
+.consultor:hover { background: #198f48; transform: translateY(-1px); }
+.consultor svg { width: 30px; height: 30px; flex: none; }
+.consultor span { display: grid; line-height: 1.2; }
+.consultor strong { font-size: 17px; font-weight: 800; }
+.consultor small { font-size: 13px; opacity: .9; }
+
+.consultor-flutuante { display: none; }
+@media (max-width: 860px) {
+  .busca__topo { flex-direction: column; align-items: stretch; }
+  .consultor { justify-content: center; }
+  .consultor-flutuante {
+    position: fixed;
+    right: 16px;
+    bottom: calc(16px + env(safe-area-inset-bottom));
+    z-index: 40;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 52px;
+    padding: 0 20px 0 16px;
+    border-radius: 999px;
+    background: var(--whatsapp);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 800;
+    text-decoration: none;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .28);
+  }
+  .consultor-flutuante svg { width: 24px; height: 24px; }
+  /* espaço no fim da página para o botão não cobrir o rodapé */
+  .rodape { padding-bottom: 84px; }
+}
+.consultor-flutuante { transition: opacity .2s ease, transform .2s ease; }
+.consultor-flutuante--escondido { opacity: 0; transform: translateY(12px); pointer-events: none; }

@@ -146,4 +146,12 @@
     mostrar(b.textContent);
   });
   mostrar("Todas");
+
+  // ---------- Fale com nosso consultor ----------
+  // no celular, o botão fixo some enquanto o botão da busca está na tela (para não aparecerem dois iguais)
+  const flutuante = document.querySelector(".consultor-flutuante");
+  if (flutuante && "IntersectionObserver" in window) {
+    new IntersectionObserver(([e]) => flutuante.classList.toggle("consultor-flutuante--escondido", e.isIntersecting))
+      .observe($("consultor"));
+  }
 })();
