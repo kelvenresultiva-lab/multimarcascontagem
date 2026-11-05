@@ -199,7 +199,7 @@
   margin-bottom: 64px;
   padding: 32px 40px;
   border-radius: 16px;
-  background: linear-gradient(110deg, #f4a133 0%, #e8721f 35%, #d4521c 70%, #bf3d1a 100%); /* mesmo laranja do pós-venda */
+  background: linear-gradient(110deg, #e4631e 0%, #d6531c 50%, #c0401a 100%); /* mesmo laranja do pós-venda */
   color: #fff;
 }
 .faixa, .pos__cabeca { text-shadow: 0 1px 2px rgba(100, 25, 0, .25); }
@@ -291,7 +291,7 @@
   overflow: hidden;
   padding: 36px 40px;
   border-radius: 16px;
-  background: linear-gradient(110deg, #f4a133 0%, #e8721f 35%, #d4521c 70%, #bf3d1a 100%);
+  background: linear-gradient(110deg, #e4631e 0%, #d6531c 50%, #c0401a 100%);
   color: #fff;
 }
 /* símbolo VR da logo, grande e bem suave no canto */
