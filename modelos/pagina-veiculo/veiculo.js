@@ -317,7 +317,15 @@
     const todos = [...v.opcionais, ...v.observacoes];
     const grupo = (re) => todos.filter((t) => re.test(t.toLowerCase()));
     const motor = (v.versao.match(/\d[.,]\d/) || [""])[0];
-    const g = [
+    // com ficha oficial do fabricante (campo v.ficha no estoque), ela é usada no lugar da montada pelos itens
+    const f = v.ficha;
+    const g = f ? [
+      ["motor", "Motor e transmissão", f.motor || []],
+      ["dimensoes", "Dimensões, peso e tanque", f.dimensoes || []],
+      ["suspensao", "Suspensão", f.suspensao || []],
+      ["seguranca", "Rodas, pneus e freios", f.rodas || []],
+      ["tecnologia", "Elétrica e painel", f.eletrica || []],
+    ].filter(([, , itens]) => itens.length) : [
       ["motor", "Motor / Desempenho / Consumo", [
         motor && `Motor ${motor.replace(",", ".")}${/turbo|tsi|tfsi|\btb\b/i.test(v.versao) ? " turbo" : ""}`,
         v.combustivel && `Combustível: ${v.combustivel}`,
@@ -342,6 +350,7 @@
       tecnologia: '<rect x="7" y="3" width="10" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M11.5 17.5h1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>',
       assentos: '<circle cx="8" cy="4.5" r="1.8" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 9v6a2 2 0 0 0 2 2h5l2 3M8 13h6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>',
       conforto: '<path d="M12 3v18M4.5 7.5l15 9M19.5 7.5l-15 9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>',
+      suspensao: '<path d="M12 3v3M12 18v3M8 6h8M8 18h8M9 8l6 2-6 2 6 2-6 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>',
     };
     if (g.length) {
       cardItens.insertAdjacentHTML("afterend", `<section class="VehicleDetails ficha-tecnica">

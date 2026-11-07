@@ -1,48 +1,90 @@
 // Estoque da VR Multimarcas Contagem — motos 0 km, montado a partir dos posts de apresentação do Instagram
 // (@vrmultimarcas.contagem.oficial). Só entra o que a loja publicou nas legendas e nas artes; preço e ano ficam
 // em branco quando não foram divulgados (o site mostra "Consulte").
+// Shineray: ficha técnica, itens e versão tirados do site oficial (shineray.com.br) em 2026-11-06; o campo ficha
+// alimenta a "Ficha Técnica" da página da moto.
 // Preços: lista de estoque enviada pela loja em 2026-11-06 (SHI 175 EFI, New Jet 125, Jef 150 EFI, Storm 200 EFI, PCX 160 CBS).
 // Fotos em fotos/<slug>/01.jpg, 02.jpg... e capa.jpg (600x450) para os cards.
 window.ESTOQUE = [
   {
     slug: "shineray-shi-175", tipo: "moto", marca: "SHINERAY", modelo: "SHI 175",
-    versao: "TRAIL 175CC", ano: "", km: 0, preco: 21590,
-    cambio: "Manual", combustivel: "", carroceria: "Trail", fotos: 3,
-    opcionais: ["Motor 175 cc", "Painel 100% digital", "Farol Full LED", "Freio a disco"],
+    versao: "TRAIL 175CC EFI", ano: "", km: 0, preco: 21590,
+    cambio: "Manual, 5 marchas", combustivel: "", carroceria: "Trail", fotos: 3,
+    opcionais: ["Injeção eletrônica (EFI)","Painel 100% digital","Freio a disco nas duas rodas","Rodas raiadas aro 19\" e 17\"","Suspensão traseira monoshock","Partida elétrica e a pedal"],
     observacoes: ["Pronta entrega"],
-    descricao: "A Shineray SHI 175 é uma trail versátil e acessível, feita para quem vai do trânsito da cidade à estrada de terra. Tem motor 175 cc, painel 100% digital, farol Full LED e freio a disco. Está em pronta entrega na VR Multimarcas, em Contagem/MG.",
+    descricao: "A Shineray SHI 175 EFI é uma trail para quem divide a semana entre o asfalto da cidade e a estrada de terra. Tem motor 175 cc com injeção eletrônica, painel 100% digital, freio a disco na frente e atrás e rodas raiadas, com aro 19 na dianteira e 17 na traseira. A altura do assento é de 875 mm e o tanque leva 14,5 litros.",
+    // ficha técnica oficial: https://www.shineray.com.br/produto/shi-175s-efi/
+    ficha: {
+      motor: ["Motor monocilíndrico, 4 tempos, 2 válvulas, SOHC","Cilindrada: 175,11 cc","Injeção eletrônica (EFI)","Potência máxima: 15,63 cv a 8.500 rpm","Torque máximo: 14 N·m a 6.500 rpm","Câmbio de 5 marchas","Embreagem manual, multidisco em banho de óleo"],
+      dimensoes: ["Comprimento: 2.080 mm","Largura: 860 mm","Altura: 1.270 mm","Altura do assento: 875 mm","Distância entre eixos: 1.365 mm","Distância do solo: 260 mm","Peso líquido: 129 kg","Peso em ordem de marcha: 145 kg","Carga máxima: 150 kg (piloto, passageiro e bagagem)","Tanque: 14,5 litros"],
+      suspensao: ["Dianteira: garfo telescópico, curso de 176 mm","Traseira: balança monoamortecedora (monoshock)"],
+      rodas: ["Rodas raiadas","Pneu dianteiro: 90/90 aro 19\"","Pneu traseiro: 110/90 aro 17\"","Freio dianteiro: disco de 265 mm, hidráulico","Freio traseiro: disco de 220 mm, hidráulico"],
+      eletrica: ["Bateria: 12 V / 6,5 Ah","Partida elétrica e a pedal","Painel 100% digital: combustível, velocidade, marcha, neutro e conta-giros"],
+    },
   },
   {
     slug: "shineray-new-jet-125", tipo: "moto", marca: "SHINERAY", modelo: "NEW JET 125",
     versao: "MOTONETA 125CC", ano: "", km: 0, preco: 14490,
-    cambio: "Semiautomático", combustivel: "", carroceria: "Motoneta", fotos: 2,
-    opcionais: ["Motor 125 cc", "Câmbio semiautomático", "Farol em LED", "Baixo consumo"],
+    cambio: "Semiautomático, 4 marchas", combustivel: "", carroceria: "Motoneta", fotos: 2,
+    opcionais: ["Painel 100% digital","Farol full LED e setas em LED","Freio dianteiro a disco","Rodas de liga leve","Guarda-volume sob o banco","Baixo consumo"],
     observacoes: [],
-    descricao: "A Shineray New Jet 125 é uma motoneta urbana pensada para quem busca praticidade, economia e conforto no dia a dia. Tem visual moderno, câmbio semiautomático, farol em LED e baixo consumo.",
+    descricao: "A Shineray New Jet 125 é uma motoneta para o dia a dia na cidade: leve, econômica e fácil de pilotar. Tem motor 125 cc, câmbio de 4 marchas, painel 100% digital, farol full LED, freio dianteiro a disco e rodas de liga leve. Embaixo do banco há um guarda-volume para documentos e objetos pessoais.",
+    // ficha técnica oficial: https://www.shineray.com.br/produto/jet-125/
+    ficha: {
+      motor: ["Motor monocilíndrico, 4 tempos","Cilindrada: 123,67 cc","Potência máxima: 8,15 cv a 7.500 rpm","Torque máximo: 8,0 N·m a 6.000 rpm","Câmbio de 4 marchas"],
+      dimensoes: ["Comprimento: 1.910 mm","Largura: 660 mm","Altura: 1.105 mm","Altura do assento: 750 mm","Distância entre eixos: 1.275 mm","Distância do solo: 110 mm","Peso líquido: 92 kg","Peso em ordem de marcha: 96 kg","Tanque: 3 litros"],
+      suspensao: ["Dianteira: garfo telescópico","Traseira: dois amortecedores (bi-shock)"],
+      rodas: ["Rodas de liga leve","Pneu dianteiro: 2.50 aro 17\"","Pneu traseiro: 80/100 aro 14\"","Freio dianteiro: disco de 220 mm, hidráulico","Freio traseiro: tambor de 111 mm"],
+      eletrica: ["Bateria: 12 V / 5,0 Ah","Partida elétrica e a pedal","Farol full LED, setas em LED","Painel 100% digital"],
+    },
   },
   {
     slug: "shineray-jef-150", tipo: "moto", marca: "SHINERAY", modelo: "JEF 150",
-    versao: "STREET 150CC", ano: "", km: 0, preco: 19490,
-    cambio: "Manual", combustivel: "", carroceria: "Street", fotos: 6,
-    opcionais: ["Painel digital", "Farol em LED", "Rodas de liga leve"],
+    versao: "STREET 150CC EFI", ano: "", km: 0, preco: 19490,
+    cambio: "Manual, 5 marchas", combustivel: "", carroceria: "Street", fotos: 6,
+    opcionais: ["Injeção eletrônica (EFI)","Painel 100% digital","Lanternas full LED","Freio dianteiro a disco","Rodas de liga leve aro 17\"","Suspensão traseira monoshock","Porta USB"],
     observacoes: [],
-    descricao: "A nova Shineray Jef 150 mantém o design moderno do modelo e traz mais tecnologia: painel digital mais intuitivo, farol em LED e rodas de liga leve, que dão mais estabilidade e aderência em diferentes tipos de terreno.",
+    descricao: "A Shineray Jef 150 EFI é uma street de visual esportivo para o uso diário. Tem motor 150 cc com injeção eletrônica, câmbio de 5 marchas, painel 100% digital, lanternas full LED, freio dianteiro a disco e rodas de liga leve aro 17. O tanque leva 12 litros.",
+    // ficha técnica oficial: https://www.shineray.com.br/produto/jef-150s-efi/
+    ficha: {
+      motor: ["Motor monocilíndrico, 4 tempos, OHC","Cilindrada: 149 cc","Injeção eletrônica (EFI)","Potência máxima: 13,5 cv a 7.500 rpm","Torque máximo: 14 N·m a 6.000 rpm","Câmbio de 5 marchas"],
+      dimensoes: ["Comprimento: 1.990 mm","Largura: 770 mm","Altura: 1.100 mm","Altura do assento: 780 mm","Distância entre eixos: 1.330 mm","Distância do solo: 190 mm","Peso bruto: 271 kg","Carga máxima: 150 kg","Tanque: 12 litros"],
+      suspensao: ["Dianteira: garfo telescópico","Traseira: balança monoamortecedora (monoshock)"],
+      rodas: ["Rodas de liga leve","Pneu dianteiro: 90/90 aro 17\"","Pneu traseiro: 120/80 aro 17\"","Freio dianteiro: disco de 235 mm, hidráulico","Freio traseiro: tambor de 128 mm"],
+      eletrica: ["Bateria: 12 V / 7 Ah","Partida elétrica e a pedal","Farol halógeno e lanternas full LED","Painel 100% digital","Porta USB"],
+    },
   },
   {
     slug: "shineray-urban-150", tipo: "moto", marca: "SHINERAY", modelo: "URBAN 150",
-    versao: "SCOOTER 150CC EFI", ano: "", km: 0, preco: null,
+    versao: "SCOOTER 150CC", ano: "", km: 0, preco: null,
     cambio: "Automático", combustivel: "", carroceria: "Scooter", fotos: 3,
-    opcionais: ["Injeção eletrônica (EFI)"],
+    opcionais: ["Freio ABS de dois canais","Sistema Start/Stop","Painel 100% digital com espelhamento do celular","Iluminação full LED","Pneus de uso misto","Freio a disco nas duas rodas"],
     observacoes: [],
-    descricao: "A Shineray Urban 150 EFI é uma scooter moderna, com tecnologia, potência e conforto na medida certa. Um avanço na mobilidade urbana com custo-benefício surpreendente.",
+    descricao: "A Shineray Urban 150 é uma scooter automática com bastante tecnologia para o preço. Tem freio ABS de dois canais com disco nas duas rodas, sistema Start/Stop que desliga o motor nas paradas para economizar combustível, iluminação full LED e painel 100% digital que espelha a tela do celular. Os pneus de uso misto e o tanque de 13,5 litros completam o conjunto.",
+    // ficha técnica oficial: https://www.shineray.com.br/produto/urban-150/
+    ficha: {
+      motor: ["Motor monocilíndrico, 4 tempos, OHC","Cilindrada: 149 cc","Potência máxima: 12,9 cv a 8.500 rpm","Torque máximo: 13 N·m a 5.000 rpm","Câmbio automático","Embreagem centrífuga automática seca","Sistema Start/Stop"],
+      dimensoes: ["Comprimento: 1.950 mm","Largura: 745 mm","Altura: 1.180 mm","Altura do assento: 795 mm","Distância entre eixos: 1.340 mm","Distância do solo: 165 mm","Peso bruto: 145 kg","Carga máxima: 150 kg","Tanque: 13,5 litros"],
+      suspensao: ["Dianteira: garfo telescópico","Traseira: duplo amortecedor a gás"],
+      rodas: ["Pneus de uso misto","Pneu dianteiro: 100/80 aro 14\"","Pneu traseiro: 130/70 aro 13\"","Freio dianteiro: disco de 240 mm, hidráulico, com ABS","Freio traseiro: disco de 220 mm, hidráulico, com ABS","ABS de dois canais"],
+      eletrica: ["Bateria: 12 V / 8,6 Ah","Partida elétrica","Iluminação full LED","Painel 100% digital com indicador de bateria","Espelhamento da tela do celular no painel"],
+    },
   },
   {
     slug: "shineray-storm-200", tipo: "moto", marca: "SHINERAY", modelo: "STORM 200",
-    versao: "200CC", ano: "", km: 0, preco: 25990,
-    cambio: "Manual", combustivel: "", carroceria: "", fotos: 1,
-    opcionais: [],
+    versao: "CROSSOVER 200CC EFI ABS", ano: "", km: 0, preco: 25990,
+    cambio: "Manual, 6 marchas", combustivel: "", carroceria: "Crossover", fotos: 1,
+    opcionais: ["Injeção eletrônica (EFI)","Freio ABS de dois canais","Freio a disco nas duas rodas","Suspensão dianteira invertida","Painel 100% digital com cores ajustáveis","Rodas de liga leve aro 17\""],
     observacoes: [],
-    descricao: "A Shineray Storm 200 está na VR Multimarcas, em Contagem/MG. Fale com a gente para conhecer de perto e saber as condições de financiamento.",
+    descricao: "A Shineray Storm 200 EFI é uma crossover de visual arrojado. Tem motor de 198 cc com 4 válvulas e injeção eletrônica, câmbio de 6 marchas, freio ABS de dois canais com disco nas duas rodas e suspensão dianteira invertida. O painel é 100% digital e permite trocar as cores.",
+    // ficha técnica oficial: https://www.shineray.com.br/produto/storm-200/
+    ficha: {
+      motor: ["Motor monocilíndrico, 4 tempos, 4 válvulas, SOHC, balanceado","Cilindrada: 198,1 cc","Injeção eletrônica (EFI)","Potência máxima: 20,4 cv a 9.000 rpm","Torque máximo: 18 N·m a 7.500 rpm","Câmbio de 6 marchas","Embreagem manual, multidisco em banho de óleo"],
+      dimensoes: ["Comprimento: 2.000 mm","Largura: 780 mm","Altura: 1.285 mm","Altura do assento: 790 mm","Distância entre eixos: 1.340 mm","Distância do solo: 180 mm","Peso líquido: 153 kg","Peso em ordem de marcha: 167,3 kg","Tanque: 13 litros","Chassi Diamond Frame"],
+      suspensao: ["Dianteira: garfo telescópico invertido","Traseira: balança monoamortecedora (monoshock)"],
+      rodas: ["Rodas de liga leve","Pneu dianteiro: 100/80 aro 17\"","Pneu traseiro: 130/70 aro 17\"","Freio dianteiro: disco de 300 mm, hidráulico","Freio traseiro: disco de 220 mm, hidráulico","ABS de dois canais"],
+      eletrica: ["Bateria: 12 V / 9,0 Ah","Partida elétrica","Painel 100% digital com cores ajustáveis: combustível, marcha, neutro e conta-giros"],
+    },
   },
   {
     slug: "haojue-dr-160", tipo: "moto", marca: "HAOJUE", modelo: "DR 160",
@@ -55,10 +97,18 @@ window.ESTOQUE = [
   {
     slug: "shineray-jet-50", tipo: "moto", marca: "SHINERAY", modelo: "JET 50",
     versao: "MOTONETA 50CC", ano: "", km: 0, preco: null,
-    cambio: "", combustivel: "", carroceria: "Motoneta", fotos: 3,
-    opcionais: ["Motor 50 cc"],
+    cambio: "Semiautomático, 4 marchas", combustivel: "", carroceria: "Motoneta", fotos: 3,
+    opcionais: ["Painel 100% digital","Farol full LED e setas em LED","Freio dianteiro a disco","Rodas de liga leve","Guarda-volume sob o banco"],
     observacoes: [],
-    descricao: "A Shineray Jet 50, a cinquentinha mais vendida do Brasil, une desempenho e economia inteligente. Na VR Multimarcas tem financiamento facilitado e parcelas que cabem no bolso.",
+    descricao: "A Shineray Jet 50 é a cinquentinha para rodar na cidade gastando pouco. Tem motor 50 cc, câmbio de 4 marchas, painel 100% digital, farol full LED, freio dianteiro a disco e rodas de liga leve, além de guarda-volume embaixo do banco. Na VR Multimarcas tem financiamento facilitado e parcelas que cabem no bolso.",
+    // ficha técnica oficial: https://www.shineray.com.br/produto/jet-50/
+    ficha: {
+      motor: ["Motor monocilíndrico, 4 tempos","Cilindrada: 49,4 cc","Potência máxima: 2,71 cv a 5.000 rpm","Torque máximo: 2,6 N·m a 6.000 rpm","Câmbio de 4 marchas"],
+      dimensoes: ["Comprimento: 1.910 mm","Largura: 660 mm","Altura: 1.105 mm","Altura do assento: 750 mm","Distância do solo: 110 mm","Peso líquido: 91 kg","Peso em ordem de marcha: 95 kg","Tanque: 3 litros"],
+      suspensao: ["Dianteira: garfo telescópico","Traseira: dois amortecedores"],
+      rodas: ["Rodas de liga leve","Pneu dianteiro: 2.50 aro 17\"","Pneu traseiro: 80/100 aro 14\"","Freio dianteiro: disco de 220 mm, hidráulico","Freio traseiro: tambor de 111 mm"],
+      eletrica: ["Bateria: 12 V / 5,0 Ah","Partida elétrica e a pedal","Farol full LED, setas em LED","Painel 100% digital"],
+    },
   },
   {
     slug: "honda-biz-125", tipo: "moto", marca: "HONDA", modelo: "BIZ 125",
