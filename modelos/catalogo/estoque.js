@@ -142,6 +142,22 @@ window.ESTOQUE = [
       eletrica: ["Bateria: 12 V / 9 Ah", "Partida elétrica", "Painel TFT", "Iluminação full LED", "Porta USB", "Sensor de cavalete lateral"],
     },
   },
+  {
+    slug: "shineray-atv-200-efi", tipo: "moto", marca: "SHINERAY", modelo: "NEW ATV 200 EFI",
+    versao: "QUADRICICLO 200CC EFI", ano: "", km: 0, preco: null,
+    cambio: "Automático", combustivel: "", carroceria: "Quadriciclo", fotos: 3,
+    opcionais: ["Injeção eletrônica (EFI)", "Câmbio automático com marcha ré", "Freios a disco hidráulicos", "Painel 100% digital", "Duas portas USB", "Suspensão dianteira Double Wishbone"],
+    observacoes: [],
+    descricao: "O Shineray New ATV 200 EFI é um quadriciclo robusto para trilha, sítio e lazer. Tem motor de 199 cc com injeção eletrônica e câmbio automático com marcha ré, o que deixa a pilotagem e as manobras fáceis. Os freios são a disco com acionamento hidráulico, a suspensão dianteira é Double Wishbone e a traseira monoshock. O painel é 100% digital e há duas portas USB para carregar o celular.",
+    // ficha técnica oficial: https://www.shineray.com.br/produto/atv-200-efi/
+    ficha: {
+      motor: ["Motor monocilíndrico, 4 tempos, OHC, refrigerado a ar", "Cilindrada: 199 cc", "Injeção eletrônica (EFI)", "Potência máxima: 10 cv a 7.500 rpm", "Torque máximo: 1,0 kgfm a 6.000 rpm", "Câmbio automático com marcha ré"],
+      dimensoes: ["Comprimento: 1.850 mm", "Largura: 1.060 mm", "Altura: 1.130 mm", "Altura do assento: 820 mm", "Distância do solo: 130 mm", "Peso bruto total: 330 kg", "Carga máxima: 150 kg (incluindo o condutor)", "Tanque: 5 litros"],
+      suspensao: ["Dianteira: Double Wishbone", "Traseira: balança monoamortecedora (monoshock)"],
+      rodas: ["Pneu dianteiro: 23x7 aro 10\"", "Pneu traseiro: 22x10 aro 10\"", "Freio dianteiro: disco de 160 mm, hidráulico", "Freio traseiro: disco de 210 mm, hidráulico"],
+      eletrica: ["Bateria: 12 V / 9 Ah", "Partida elétrica", "Painel 100% digital: velocímetro, odômetro, indicador de neutro e conta-giros", "Duas portas USB de 5 V"],
+    },
+  },
   // Elétricas: especificações do catálogo do Grupo Voltrix (06.10.2026); fotos enviadas pela loja.
   // Os valores do catálogo são de revenda (sócios Voltrix) e NÃO vão para o site: o preço vem da loja.
   {
