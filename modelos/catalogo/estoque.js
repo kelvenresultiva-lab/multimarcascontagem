@@ -156,6 +156,20 @@ window.ESTOQUE = [
       itens: ["Bateria removível", "Cesto dianteiro", "Banco para passageiro"],
     },
   },
+  {
+    slug: "voltrix-capuccino", tipo: "moto", marca: "VOLTRIX", modelo: "CAPUCCINO",
+    versao: "SCOOTER ELÉTRICA", ano: "", km: 0, preco: null,
+    cambio: "", combustivel: "Elétrica", potencia: "1.000 W", carroceria: "Elétrica", fotos: 3,
+    opcionais: ["Motor elétrico de 1.000 W", "Autonomia de 60 a 70 km", "Bateria de lítio 60 V / 20 Ah", "Baú traseiro", "Farol circular", "Banco amplo"],
+    observacoes: ["Pronta entrega"],
+    descricao: "A Capuccino é uma scooter elétrica de estilo retrô, com farol circular e acabamento elegante. É feita para passeios tranquilos pela cidade: chega a 25 km/h e a bateria de lítio de 60 V / 20 Ah rende de 60 a 70 km por carga. Vem com baú traseiro para levar suas coisas e banco amplo, mais confortável no dia a dia.",
+    ficha: {
+      titulos: { motor: "Motor, bateria e desempenho", dimensoes: "Capacidade" },
+      motor: ["Motor elétrico de 1.000 W", "Velocidade máxima: 25 km/h", "Bateria de lítio: 60 V / 20 Ah", "Autonomia: de 60 a 70 km por carga"],
+      dimensoes: ["Peso suportado: até 120 kg"],
+      itens: ["Baú traseiro", "Farol circular", "Banco amplo"],
+    },
+  },
 ].map((v, i) => ({
   ...v,
   id: i + 1,
