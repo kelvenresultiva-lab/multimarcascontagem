@@ -1,11 +1,12 @@
 // Estoque da VR Multimarcas Contagem — motos 0 km, montado a partir dos posts de apresentação do Instagram
 // (@vrmultimarcas.contagem.oficial). Só entra o que a loja publicou nas legendas e nas artes; preço e ano ficam
 // em branco quando não foram divulgados (o site mostra "Consulte").
+// Preços: lista de estoque enviada pela loja em 2026-11-06 (SHI 175 EFI, New Jet 125, Jef 150 EFI, Storm 200 EFI, PCX 160 CBS).
 // Fotos em fotos/<slug>/01.jpg, 02.jpg... e capa.jpg (600x450) para os cards.
 window.ESTOQUE = [
   {
     slug: "shineray-shi-175", tipo: "moto", marca: "SHINERAY", modelo: "SHI 175",
-    versao: "TRAIL 175CC", ano: "", km: 0, preco: null,
+    versao: "TRAIL 175CC", ano: "", km: 0, preco: 21590,
     cambio: "Manual", combustivel: "", carroceria: "Trail", fotos: 3,
     opcionais: ["Motor 175 cc", "Painel 100% digital", "Farol Full LED", "Freio a disco"],
     observacoes: ["Pronta entrega"],
@@ -13,7 +14,7 @@ window.ESTOQUE = [
   },
   {
     slug: "shineray-new-jet-125", tipo: "moto", marca: "SHINERAY", modelo: "NEW JET 125",
-    versao: "MOTONETA 125CC", ano: "", km: 0, preco: null,
+    versao: "MOTONETA 125CC", ano: "", km: 0, preco: 14490,
     cambio: "Semiautomático", combustivel: "", carroceria: "Motoneta", fotos: 2,
     opcionais: ["Motor 125 cc", "Câmbio semiautomático", "Farol em LED", "Baixo consumo"],
     observacoes: [],
@@ -21,7 +22,7 @@ window.ESTOQUE = [
   },
   {
     slug: "shineray-jef-150", tipo: "moto", marca: "SHINERAY", modelo: "JEF 150",
-    versao: "STREET 150CC", ano: "", km: 0, preco: null,
+    versao: "STREET 150CC", ano: "", km: 0, preco: 19490,
     cambio: "Manual", combustivel: "", carroceria: "Street", fotos: 6,
     opcionais: ["Painel digital", "Farol em LED", "Rodas de liga leve"],
     observacoes: [],
@@ -37,7 +38,7 @@ window.ESTOQUE = [
   },
   {
     slug: "shineray-storm-200", tipo: "moto", marca: "SHINERAY", modelo: "STORM 200",
-    versao: "200CC", ano: "", km: 0, preco: null,
+    versao: "200CC", ano: "", km: 0, preco: 25990,
     cambio: "Manual", combustivel: "", carroceria: "", fotos: 1,
     opcionais: [],
     observacoes: [],
@@ -69,7 +70,7 @@ window.ESTOQUE = [
   },
   {
     slug: "honda-pcx-2027", tipo: "moto", marca: "HONDA", modelo: "PCX",
-    versao: "SCOOTER — MODELO 2027", ano: "2027", km: 0, preco: null,
+    versao: "SCOOTER — MODELO 2027", ano: "2027", km: 0, preco: 25130,
     cambio: "Automático", combustivel: "", carroceria: "Scooter", fotos: 3,
     opcionais: [],
     observacoes: [],

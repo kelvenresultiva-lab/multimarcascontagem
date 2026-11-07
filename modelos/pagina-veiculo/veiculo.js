@@ -241,7 +241,7 @@
     const valor = v.vendido ? "Vendido" : v.preco == null ? "Sob consulta" : reais(v.preco);
     infoPreco.innerHTML = `
       <div class="card-preco${v.vendido ? " card-preco--vendido" : ""}">
-        <span class="card-preco__rotulo">${v.vendido ? "Este veículo" : v.preco == null ? "Preço" : "Preço à vista"}</span>
+        <span class="card-preco__rotulo">${v.vendido ? "Este veículo" : "Preço"}</span>
         <strong class="card-preco__valor${v.preco == null && !v.vendido ? " card-preco__valor--consulta" : ""}" id="vehicleSendProposalPrice">${valor}</strong>
         ${economia > 0 ? `<span class="card-preco__fipe">${check}${reais(economia)} abaixo da FIPE</span>` : ""}
         <ul class="card-preco__resumo">${resumo.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>
