@@ -185,6 +185,20 @@ window.ESTOQUE = [
       itens: ["Bateria removível", "Câmbio de 7 marchas", "Freios a disco"],
     },
   },
+  {
+    slug: "voltrix-speed-plus", tipo: "moto", marca: "VOLTRIX", modelo: "SPEED PLUS",
+    versao: "SCOOTER ELÉTRICA", ano: "", km: 0, preco: null,
+    cambio: "", combustivel: "Elétrica", potencia: "1.000 W", carroceria: "Elétrica", fotos: 3,
+    opcionais: ["Motor elétrico de 1.000 W", "Autonomia de 40 a 50 km", "Bateria de lítio 48 V (20 Ah ou 30 Ah)", "Baú traseiro", "Banco amplo", "Iluminação frontal"],
+    observacoes: ["Pronta entrega"],
+    descricao: "A Speed Plus é uma scooter elétrica com cara de moto: carenagem esportiva, iluminação frontal e baú traseiro de série. Tem motor de 1.000 W, chega a 32 km/h e a bateria de lítio de 48 V, de 20 Ah ou 30 Ah, rende de 40 a 50 km por carga. O banco amplo deixa a pilotagem mais confortável, e ela aguenta até 150 kg.",
+    ficha: {
+      titulos: { motor: "Motor, bateria e desempenho", dimensoes: "Capacidade" },
+      motor: ["Motor elétrico de 1.000 W", "Velocidade máxima: 32 km/h", "Bateria de lítio: 48 V / 20 Ah ou 48 V / 30 Ah", "Autonomia: de 40 a 50 km por carga"],
+      dimensoes: ["Peso suportado: até 150 kg"],
+      itens: ["Baú traseiro", "Banco amplo", "Iluminação frontal"],
+    },
+  },
 ].map((v, i) => ({
   ...v,
   id: i + 1,
