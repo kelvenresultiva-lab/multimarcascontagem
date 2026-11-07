@@ -1,5 +1,5 @@
 // Simular financiamento: em vez de abrir o WhatsApp direto, os botões de "simular" abrem um formulário
-// (nome, CPF, telefone e e-mail). Ao enviar, o WhatsApp da loja abre com tudo preenchido para o consultor.
+// (nome, CPF, data de nascimento, telefone e e-mail). Ao enviar, o WhatsApp da loja abre com tudo preenchido para o consultor.
 // Funciona em qualquer link wa.me cuja mensagem fale em "simular"; sem JavaScript, o link continua indo direto ao WhatsApp.
 // Os dados não ficam guardados no site: vão só na mensagem do WhatsApp.
 (function () {
@@ -22,6 +22,19 @@
     return true;
   }
   const mascaraCpf = (v) => so(v).slice(0, 11).replace(/(\d{3})(\d)/, "$1.$2").replace(/(\d{3})(\d)/, "$1.$2").replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+  const mascaraData = (v) => so(v).slice(0, 8).replace(/(\d{2})(\d)/, "$1/$2").replace(/(\d{2})(\d)/, "$1/$2");
+  // data real (dd/mm/aaaa) e idade entre 18 e 100 anos
+  function nascimentoValido(v) {
+    const m = String(v).match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
+    if (!m) return false;
+    const [d, mes, a] = [+m[1], +m[2], +m[3]];
+    const data = new Date(a, mes - 1, d);
+    if (data.getFullYear() !== a || data.getMonth() !== mes - 1 || data.getDate() !== d) return false;
+    const hoje = new Date();
+    let idade = hoje.getFullYear() - a;
+    if (hoje.getMonth() < mes - 1 || (hoje.getMonth() === mes - 1 && hoje.getDate() < d)) idade--;
+    return idade >= 18 && idade <= 100;
+  }
   function mascaraTel(v) {
     const d = so(v).slice(0, 11);
     if (d.length <= 2) return d.length ? `(${d}` : "";
@@ -57,6 +70,11 @@
           <small class="fin__erro">Confira o CPF.</small>
         </label>
         <label class="fin__campo">
+          <span>Data de nascimento</span>
+          <input name="nascimento" inputmode="numeric" autocomplete="bday" placeholder="dd/mm/aaaa" maxlength="10" required>
+          <small class="fin__erro">Digite a data no formato dd/mm/aaaa (é preciso ter 18 anos ou mais).</small>
+        </label>
+        <label class="fin__campo">
           <span>Telefone / WhatsApp</span>
           <input name="tel" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="(31) 99999-9999" maxlength="15" required>
           <small class="fin__erro">Digite o telefone com DDD.</small>
@@ -82,6 +100,7 @@
   const checagens = {
     nome: (v) => v.trim().length >= 3,
     cpf: cpfValido,
+    nascimento: nascimentoValido,
     tel: (v) => [10, 11].includes(so(v).length),
     email: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()),
   };
@@ -92,6 +111,7 @@
     return ok;
   }
   campo("cpf").addEventListener("input", (e) => (e.target.value = mascaraCpf(e.target.value)));
+  campo("nascimento").addEventListener("input", (e) => (e.target.value = mascaraData(e.target.value)));
   campo("tel").addEventListener("input", (e) => (e.target.value = mascaraTel(e.target.value)));
   Object.keys(checagens).forEach((n) => {
     campo(n).addEventListener("blur", () => campo(n).value && conferir(n));
@@ -124,6 +144,7 @@
       "",
       `Nome: ${campo("nome").value.trim()}`,
       `CPF: ${mascaraCpf(campo("cpf").value)}`,
+      `Data de nascimento: ${campo("nascimento").value}`,
       `Telefone: ${mascaraTel(campo("tel").value)}`,
       `E-mail: ${campo("email").value.trim()}`,
     ];

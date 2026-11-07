@@ -158,10 +158,10 @@ window.ESTOQUE = [
       eletrica: ["Bateria: 12 V / 9 Ah", "Partida elétrica", "Painel 100% digital: velocímetro, odômetro, indicador de neutro e conta-giros", "Duas portas USB de 5 V"],
     },
   },
-  // Elétricas: especificações do catálogo do Grupo Voltrix (06.10.2026); fotos enviadas pela loja.
+  // Scooters elétricas: especificações do catálogo do fornecedor (06.10.2026); fotos enviadas pela loja.
   // Preço no site = valor de pronta entrega do catálogo + R$ 3.500 (pedido da loja em 2026-11-07). A Thunder não está no catálogo.
   {
-    slug: "voltrix-x13", tipo: "moto", marca: "VOLTRIX", modelo: "X13",
+    slug: "scooter-x13", tipo: "moto", marca: "SCOOTERS", modelo: "X13",
     versao: "SCOOTER ELÉTRICA", ano: "", km: 0, preco: 8700,
     cambio: "", combustivel: "Elétrica", potencia: "1.000 W", carroceria: "Elétrica", fotos: 3,
     opcionais: ["Motor elétrico de 1.000 W", "Autonomia de até 60 km", "Som Bluetooth", "Marcha ré", "Suporte para celular", "Suporta até 200 kg"],
@@ -175,7 +175,7 @@ window.ESTOQUE = [
     },
   },
   {
-    slug: "voltrix-pop", tipo: "moto", marca: "VOLTRIX", modelo: "POP",
+    slug: "scooter-pop", tipo: "moto", marca: "SCOOTERS", modelo: "POP",
     versao: "BIKE ELÉTRICA", ano: "", km: 0, preco: 6199,
     cambio: "", combustivel: "Elétrica", potencia: "1.000 W", carroceria: "Elétrica", fotos: 3,
     opcionais: ["Motor elétrico de 1.000 W", "Autonomia de até 40 km", "Bateria removível", "Cesto dianteiro", "Banco para passageiro", "Rodas aro 14"],
@@ -189,7 +189,7 @@ window.ESTOQUE = [
     },
   },
   {
-    slug: "voltrix-capuccino", tipo: "moto", marca: "VOLTRIX", modelo: "CAPUCCINO",
+    slug: "scooter-capuccino", tipo: "moto", marca: "SCOOTERS", modelo: "CAPUCCINO",
     versao: "SCOOTER ELÉTRICA", ano: "", km: 0, preco: 9000,
     cambio: "", combustivel: "Elétrica", potencia: "1.000 W", carroceria: "Elétrica", fotos: 3,
     opcionais: ["Motor elétrico de 1.000 W", "Autonomia de 60 a 70 km", "Bateria de lítio 60 V / 20 Ah", "Baú traseiro", "Farol circular", "Banco amplo"],
@@ -203,7 +203,7 @@ window.ESTOQUE = [
     },
   },
   {
-    slug: "voltrix-future-v8-pro", tipo: "moto", marca: "VOLTRIX", modelo: "FUTURE V8 PRO",
+    slug: "scooter-future-v8-pro", tipo: "moto", marca: "SCOOTERS", modelo: "FUTURE V8 PRO",
     versao: "BIKE ELÉTRICA", ano: "", km: 0, preco: 8000,
     cambio: "7 marchas", combustivel: "Elétrica", potencia: "1.000 W", carroceria: "Elétrica", fotos: 3,
     opcionais: ["Motor elétrico de 1.000 W", "Autonomia de até 50 km", "Freios a disco", "Câmbio de 7 marchas", "Bateria removível", "Suporta até 150 kg"],
@@ -218,7 +218,7 @@ window.ESTOQUE = [
     },
   },
   {
-    slug: "voltrix-speed-plus", tipo: "moto", marca: "VOLTRIX", modelo: "SPEED PLUS",
+    slug: "scooter-speed-plus", tipo: "moto", marca: "SCOOTERS", modelo: "SPEED PLUS",
     versao: "SCOOTER ELÉTRICA", ano: "", km: 0, preco: 9500,
     cambio: "", combustivel: "Elétrica", potencia: "1.000 W", carroceria: "Elétrica", fotos: 3,
     opcionais: ["Motor elétrico de 1.000 W", "Autonomia de 40 a 50 km", "Bateria de lítio 48 V (20 Ah ou 30 Ah)", "Baú traseiro", "Banco amplo", "Iluminação frontal"],
@@ -232,7 +232,7 @@ window.ESTOQUE = [
     },
   },
   {
-    slug: "voltrix-conquest-kaudunski", tipo: "moto", marca: "VOLTRIX", modelo: "CONQUEST KAUDUNSKI",
+    slug: "scooter-conquest-kaudunski", tipo: "moto", marca: "SCOOTERS", modelo: "CONQUEST KAUDUNSKI",
     versao: "SCOOTER ELÉTRICA", ano: "", km: 0, preco: 9500,
     cambio: "", combustivel: "Elétrica", potencia: "1.000 W", carroceria: "Elétrica", fotos: 3,
     opcionais: ["Motor elétrico de 1.000 W", "Autonomia de 40 a 50 km", "Bateria de lítio 48 V / 20 Ah", "Rodas de liga", "Banco amplo", "Iluminação frontal", "Suporta até 200 kg"],
@@ -247,7 +247,7 @@ window.ESTOQUE = [
     },
   },
   {
-    slug: "voltrix-conquest-van", tipo: "moto", marca: "VOLTRIX", modelo: "CONQUEST VAN",
+    slug: "scooter-conquest-van", tipo: "moto", marca: "SCOOTERS", modelo: "CONQUEST VAN",
     versao: "SCOOTER ELÉTRICA", ano: "", km: 0, preco: 9500,
     cambio: "", combustivel: "Elétrica", potencia: "1.000 W", carroceria: "Elétrica", fotos: 3,
     opcionais: ["Motor elétrico de 1.000 W", "Autonomia de 40 a 50 km", "Bateria de lítio 48 V / 20 Ah", "Baú traseiro", "Banco amplo", "Iluminação frontal", "Suporta até 200 kg"],
@@ -261,7 +261,7 @@ window.ESTOQUE = [
     },
   },
   {
-    slug: "voltrix-triciclo-fenix-duos", tipo: "moto", marca: "VOLTRIX", modelo: "FENIX DUOS",
+    slug: "scooter-triciclo-fenix-duos", tipo: "moto", marca: "SCOOTERS", modelo: "FENIX DUOS",
     versao: "TRICICLO ELÉTRICO", ano: "", km: 0, preco: 9500,
     cambio: "", combustivel: "Elétrica", potencia: "1.000 W", carroceria: "Elétrica", fotos: 3,
     opcionais: ["Motor elétrico de 1.000 W", "Autonomia de 50 a 70 km", "Bateria de lítio 48 V / 24 Ah", "Assento duplo", "Encosto e apoio de braços", "Cesto dianteiro", "Suporta até 180 kg"],
@@ -275,7 +275,7 @@ window.ESTOQUE = [
     },
   },
   {
-    slug: "voltrix-tank-bolin", tipo: "moto", marca: "VOLTRIX", modelo: "TANK BOLIN",
+    slug: "scooter-tank-bolin", tipo: "moto", marca: "SCOOTERS", modelo: "TANK BOLIN",
     versao: "SCOOTER ELÉTRICA", ano: "", km: 0, preco: 9999,
     cambio: "", combustivel: "Elétrica", potencia: "1.000 W", carroceria: "Elétrica", fotos: 3,
     opcionais: ["Motor elétrico de 1.000 W", "Bateria 60 V / 21 Ah", "Recarga em 5 horas", "Para-brisa alto", "Farol duplo", "Proteção frontal"],
@@ -287,9 +287,9 @@ window.ESTOQUE = [
       itens: ["Para-brisa alto", "Farol duplo", "Proteção frontal"],
     },
   },
-  // Thunder: não está no catálogo Voltrix nem foi achada na internet; entra só com as fotos, sem ficha técnica.
+  // Thunder: não está no catálogo do fornecedor nem foi achada na internet; entra só com as fotos, sem ficha técnica.
   {
-    slug: "voltrix-thunder", tipo: "moto", marca: "VOLTRIX", modelo: "THUNDER",
+    slug: "scooter-thunder", tipo: "moto", marca: "SCOOTERS", modelo: "THUNDER",
     versao: "SCOOTER ELÉTRICA", ano: "", km: 0, preco: null,
     cambio: "", combustivel: "Elétrica", potencia: "", carroceria: "Elétrica", fotos: 3,
     opcionais: [],
