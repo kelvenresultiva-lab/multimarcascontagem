@@ -214,6 +214,20 @@ window.ESTOQUE = [
       itens: ["Banco amplo", "Iluminação frontal", "Rodas de liga"],
     },
   },
+  {
+    slug: "voltrix-conquest-van", tipo: "moto", marca: "VOLTRIX", modelo: "CONQUEST VAN",
+    versao: "SCOOTER ELÉTRICA", ano: "", km: 0, preco: null,
+    cambio: "", combustivel: "Elétrica", potencia: "1.000 W", carroceria: "Elétrica", fotos: 3,
+    opcionais: ["Motor elétrico de 1.000 W", "Autonomia de 40 a 50 km", "Bateria de lítio 48 V / 20 Ah", "Baú traseiro", "Banco amplo", "Iluminação frontal", "Suporta até 200 kg"],
+    observacoes: ["Pronta entrega"],
+    descricao: "A Conquest Van é uma scooter elétrica robusta e prática para o dia a dia, com baú traseiro de série para levar compras, documentos ou o capacete. Tem motor de 1.000 W, chega a 32 km/h e a bateria de lítio de 48 V / 20 Ah rende de 40 a 50 km por carga. Tem banco amplo e iluminação frontal, e aguenta até 200 kg.",
+    ficha: {
+      titulos: { motor: "Motor, bateria e desempenho", dimensoes: "Capacidade" },
+      motor: ["Motor elétrico de 1.000 W", "Velocidade máxima: 32 km/h", "Bateria de lítio: 48 V / 20 Ah", "Autonomia: de 40 a 50 km por carga"],
+      dimensoes: ["Peso suportado: até 200 kg"],
+      itens: ["Baú traseiro", "Banco amplo", "Iluminação frontal"],
+    },
+  },
 ].map((v, i) => ({
   ...v,
   id: i + 1,
