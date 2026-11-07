@@ -142,6 +142,20 @@ window.ESTOQUE = [
       itens: ["Som Bluetooth", "Marcha ré", "Suporte para celular"],
     },
   },
+  {
+    slug: "voltrix-pop", tipo: "moto", marca: "VOLTRIX", modelo: "POP",
+    versao: "BIKE ELÉTRICA", ano: "", km: 0, preco: null,
+    cambio: "", combustivel: "Elétrica", potencia: "1.000 W", carroceria: "Elétrica", fotos: 3,
+    opcionais: ["Motor elétrico de 1.000 W", "Autonomia de até 40 km", "Bateria removível", "Cesto dianteiro", "Banco para passageiro", "Rodas aro 14"],
+    observacoes: ["Pronta entrega"],
+    descricao: "A Pop é uma bike elétrica compacta e prática para o dia a dia: ir ao trabalho, à escola ou fazer compras sem depender de gasolina. Tem motor de 1.000 W, velocidade de até 32 km/h e bateria de 48 V / 20 Ah com autonomia de até 40 km. A bateria é removível, para carregar fora da bike, e ela vem com cesto dianteiro, banco para passageiro e rodas aro 14.",
+    ficha: {
+      titulos: { motor: "Motor, bateria e desempenho" },
+      motor: ["Motor elétrico de 1.000 W", "Velocidade máxima: 32 km/h", "Bateria: 48 V / 20 Ah, removível", "Autonomia: até 40 km por carga"],
+      rodas: ["Rodas aro 14"],
+      itens: ["Bateria removível", "Cesto dianteiro", "Banco para passageiro"],
+    },
+  },
 ].map((v, i) => ({
   ...v,
   id: i + 1,
