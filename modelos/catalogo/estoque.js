@@ -228,6 +228,20 @@ window.ESTOQUE = [
       itens: ["Baú traseiro", "Banco amplo", "Iluminação frontal"],
     },
   },
+  {
+    slug: "voltrix-triciclo-fenix-duos", tipo: "moto", marca: "VOLTRIX", modelo: "FENIX DUOS",
+    versao: "TRICICLO ELÉTRICO", ano: "", km: 0, preco: null,
+    cambio: "", combustivel: "Elétrica", potencia: "1.000 W", carroceria: "Elétrica", fotos: 3,
+    opcionais: ["Motor elétrico de 1.000 W", "Autonomia de 50 a 70 km", "Bateria de lítio 48 V / 24 Ah", "Assento duplo", "Encosto e apoio de braços", "Cesto dianteiro", "Suporta até 180 kg"],
+    observacoes: ["Pronta entrega"],
+    descricao: "O Fenix Duos é um triciclo elétrico de três rodas, estável e fácil de conduzir, ideal para quem quer mais estabilidade e conforto no dia a dia. Tem motor de 1.000 W, chega a 35 km/h e a bateria de lítio de 48 V / 24 Ah rende de 50 a 70 km por carga. O assento é duplo, com encosto e apoio de braços para o passageiro, e o cesto dianteiro ajuda a levar compras. Aguenta até 180 kg.",
+    ficha: {
+      titulos: { motor: "Motor, bateria e desempenho", dimensoes: "Capacidade" },
+      motor: ["Motor elétrico de 1.000 W", "Velocidade máxima: 35 km/h", "Bateria de lítio: 48 V / 24 Ah", "Autonomia: de 50 a 70 km por carga"],
+      dimensoes: ["Peso suportado: até 180 kg", "Assento duplo"],
+      itens: ["Assento duplo", "Encosto e apoio de braços", "Cesto dianteiro"],
+    },
+  },
 ].map((v, i) => ({
   ...v,
   id: i + 1,
