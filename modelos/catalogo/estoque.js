@@ -242,6 +242,19 @@ window.ESTOQUE = [
       itens: ["Assento duplo", "Encosto e apoio de braços", "Cesto dianteiro"],
     },
   },
+  {
+    slug: "voltrix-tank-bolin", tipo: "moto", marca: "VOLTRIX", modelo: "TANK BOLIN",
+    versao: "SCOOTER ELÉTRICA", ano: "", km: 0, preco: null,
+    cambio: "", combustivel: "Elétrica", potencia: "1.000 W", carroceria: "Elétrica", fotos: 3,
+    opcionais: ["Motor elétrico de 1.000 W", "Bateria 60 V / 21 Ah", "Recarga em 5 horas", "Para-brisa alto", "Farol duplo", "Proteção frontal"],
+    observacoes: ["Pronta entrega"],
+    descricao: "A Tank Bolin é uma scooter elétrica de visual aventureiro, com para-brisa alto, farol duplo e proteção frontal. Tem motor de 1.000 W, chega a 32 km/h e usa bateria de 60 V / 21 Ah, que recarrega em cerca de 5 horas com o carregador de 2 A. É uma boa escolha para quem quer uma elétrica com presença e cara de scooter maior.",
+    ficha: {
+      titulos: { motor: "Motor, bateria e desempenho" },
+      motor: ["Motor elétrico de 1.000 W", "Velocidade máxima: 32 km/h", "Bateria: 60 V / 21 Ah", "Carregador: 2 A", "Tempo de recarga: 5 horas"],
+      itens: ["Para-brisa alto", "Farol duplo", "Proteção frontal"],
+    },
+  },
 ].map((v, i) => ({
   ...v,
   id: i + 1,
