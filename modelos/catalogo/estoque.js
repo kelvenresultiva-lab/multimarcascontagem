@@ -170,6 +170,21 @@ window.ESTOQUE = [
       itens: ["Baú traseiro", "Farol circular", "Banco amplo"],
     },
   },
+  {
+    slug: "voltrix-future-v8-pro", tipo: "moto", marca: "VOLTRIX", modelo: "FUTURE V8 PRO",
+    versao: "BIKE ELÉTRICA", ano: "", km: 0, preco: null,
+    cambio: "7 marchas", combustivel: "Elétrica", potencia: "1.000 W", carroceria: "Elétrica", fotos: 3,
+    opcionais: ["Motor elétrico de 1.000 W", "Autonomia de até 50 km", "Freios a disco", "Câmbio de 7 marchas", "Bateria removível", "Suporta até 150 kg"],
+    observacoes: ["Pronta entrega"],
+    descricao: "A Future V8 Pro é uma bike elétrica de visual retrô e pneus largos, que roda bem na cidade e encara ruas de terra. Tem motor de 1.000 W, chega a 32 km/h e a bateria de 48 V / 15,6 Ah rende até 50 km por carga. Os freios são a disco e o câmbio tem 7 marchas para quem quiser pedalar. A bateria é removível, para carregar onde for mais prático.",
+    ficha: {
+      titulos: { motor: "Motor, bateria e desempenho", dimensoes: "Capacidade" },
+      motor: ["Motor elétrico de 1.000 W", "Velocidade máxima: 32 km/h", "Bateria: 48 V / 15,6 Ah, removível", "Autonomia: até 50 km por carga", "Câmbio de 7 marchas"],
+      dimensoes: ["Peso suportado: até 150 kg"],
+      rodas: ["Freios a disco"],
+      itens: ["Bateria removível", "Câmbio de 7 marchas", "Freios a disco"],
+    },
+  },
 ].map((v, i) => ({
   ...v,
   id: i + 1,
