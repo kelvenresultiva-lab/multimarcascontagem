@@ -126,6 +126,22 @@ window.ESTOQUE = [
     observacoes: [],
     descricao: "A Honda PCX se destaca pela tecnologia avançada. Na VR Multimarcas Contagem você já encontra o modelo 2027.",
   },
+  {
+    slug: "shineray-shi-400sc", tipo: "moto", marca: "SHINERAY", modelo: "SHI 400SC",
+    versao: "SCRAMBLER 400CC ABS", ano: "", km: 0, preco: null,
+    cambio: "Manual, 5 marchas", combustivel: "", carroceria: "Scrambler", fotos: 3,
+    opcionais: ["Freio ABS de duplo canal", "Freio a disco nas duas rodas", "Painel TFT", "Iluminação full LED", "Porta USB", "Sensor de cavalete lateral", "Rodas raiadas aro 19\" e 18\""],
+    observacoes: [],
+    descricao: "A Shineray SHI 400SC é uma scrambler de visual clássico, com banco em matelassê, rodas raiadas e escapamento duplo, para rodar na cidade e na estrada. O motor de 400 cc entrega 26,5 cv com câmbio de 5 marchas, e os freios a disco têm ABS de duplo canal. Tem painel TFT, iluminação full LED, porta USB e tanque de 14 litros.",
+    // ficha técnica oficial: https://www.shineray.com.br/produto/shi-400sc/
+    ficha: {
+      motor: ["Motor monocilíndrico, 4 tempos, 4 válvulas, SOHC", "Cilindrada: 399,7 cc", "Potência máxima: 26,5 cv a 7.000 rpm", "Torque máximo: 30 N·m a 5.500 rpm", "Câmbio de 5 marchas", "Embreagem manual, multidisco em banho de óleo"],
+      dimensoes: ["Comprimento: 2.140 mm", "Largura: 760 mm", "Altura: 1.430 mm", "Altura do assento: 815 mm", "Distância entre eixos: 1.400 mm", "Distância do solo: 160 mm", "Peso líquido: 155 kg", "Peso em ordem de marcha: 168 kg", "Carga máxima: 150 kg (piloto, passageiro, bagagem e acessórios)", "Tanque: 14 litros (com reserva)"],
+      suspensao: ["Dianteira: garfo telescópico convencional, curso de 100 mm", "Traseira: dois amortecedores, curso na roda de 80 mm"],
+      rodas: ["Rodas raiadas", "Pneu dianteiro: 110/90 aro 19\"", "Pneu traseiro: 130/70 aro 18\"", "Freio dianteiro: disco de 275 mm, hidráulico, com ABS", "Freio traseiro: disco de 240 mm, hidráulico, com ABS", "ABS de duplo canal"],
+      eletrica: ["Bateria: 12 V / 9 Ah", "Partida elétrica", "Painel TFT", "Iluminação full LED", "Porta USB", "Sensor de cavalete lateral"],
+    },
+  },
   // Elétricas: especificações do catálogo do Grupo Voltrix (06.10.2026); fotos enviadas pela loja.
   // Os valores do catálogo são de revenda (sócios Voltrix) e NÃO vão para o site: o preço vem da loja.
   {
