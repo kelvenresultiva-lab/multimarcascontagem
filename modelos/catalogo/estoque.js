@@ -199,6 +199,21 @@ window.ESTOQUE = [
       itens: ["Baú traseiro", "Banco amplo", "Iluminação frontal"],
     },
   },
+  {
+    slug: "voltrix-conquest-kaudunski", tipo: "moto", marca: "VOLTRIX", modelo: "CONQUEST KAUDUNSKI",
+    versao: "SCOOTER ELÉTRICA", ano: "", km: 0, preco: null,
+    cambio: "", combustivel: "Elétrica", potencia: "1.000 W", carroceria: "Elétrica", fotos: 3,
+    opcionais: ["Motor elétrico de 1.000 W", "Autonomia de 40 a 50 km", "Bateria de lítio 48 V / 20 Ah", "Rodas de liga", "Banco amplo", "Iluminação frontal", "Suporta até 200 kg"],
+    observacoes: ["Pronta entrega"],
+    descricao: "A Conquest Kaudunski é uma scooter elétrica de linhas modernas e iluminação frontal marcante, para o dia a dia na cidade. Tem motor de 1.000 W, chega a 32 km/h e a bateria de lítio de 48 V / 20 Ah rende de 40 a 50 km por carga. Vem com rodas de liga e banco amplo, e aguenta até 200 kg.",
+    ficha: {
+      titulos: { motor: "Motor, bateria e desempenho", dimensoes: "Capacidade" },
+      motor: ["Motor elétrico de 1.000 W", "Velocidade máxima: 32 km/h", "Bateria de lítio: 48 V / 20 Ah", "Autonomia: de 40 a 50 km por carga"],
+      dimensoes: ["Peso suportado: até 200 kg"],
+      rodas: ["Rodas de liga"],
+      itens: ["Banco amplo", "Iluminação frontal", "Rodas de liga"],
+    },
+  },
 ].map((v, i) => ({
   ...v,
   id: i + 1,
