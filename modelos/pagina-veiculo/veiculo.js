@@ -54,7 +54,8 @@
       ["Cidade", CIDADE, true],
       ["Ano", v.ano || "Consulte"],
       ["KM", km(v) || "Consulte"],
-      ["Câmbio", ou(v.cambio)],
+      // elétricas não têm câmbio: no lugar vai a potência do motor
+      v.combustivel === "Elétrica" ? ["Motor", ou(v.potencia)] : ["Câmbio", ou(v.cambio)],
       ["Carroceria", ou(v.carroceria)],
       ["Combustível", ou(v.combustivel)],
       v.vendido ? ["Situação", "Vendido"] : ["Condição", "0 km"],
@@ -318,13 +319,15 @@
     const grupo = (re) => todos.filter((t) => re.test(t.toLowerCase()));
     const motor = (v.versao.match(/\d[.,]\d/) || [""])[0];
     // com ficha oficial do fabricante (campo v.ficha no estoque), ela é usada no lugar da montada pelos itens
-    const f = v.ficha;
+    // (ficha.titulos troca o nome de um grupo, ex.: nas elétricas "Motor e bateria")
+    const f = v.ficha, tt = (f && f.titulos) || {};
     const g = f ? [
-      ["motor", "Motor e transmissão", f.motor || []],
-      ["dimensoes", "Dimensões, peso e tanque", f.dimensoes || []],
-      ["suspensao", "Suspensão", f.suspensao || []],
-      ["seguranca", "Rodas, pneus e freios", f.rodas || []],
-      ["tecnologia", "Elétrica e painel", f.eletrica || []],
+      ["motor", tt.motor || "Motor e transmissão", f.motor || []],
+      ["dimensoes", tt.dimensoes || "Dimensões, peso e tanque", f.dimensoes || []],
+      ["suspensao", tt.suspensao || "Suspensão", f.suspensao || []],
+      ["seguranca", tt.rodas || "Rodas, pneus e freios", f.rodas || []],
+      ["tecnologia", tt.eletrica || "Elétrica e painel", f.eletrica || []],
+      ["conforto", tt.itens || "Itens de série", f.itens || []],
     ].filter(([, , itens]) => itens.length) : [
       ["motor", "Motor / Desempenho / Consumo", [
         motor && `Motor ${motor.replace(",", ".")}${/turbo|tsi|tfsi|\btb\b/i.test(v.versao) ? " turbo" : ""}`,

@@ -11,6 +11,7 @@
     ["Shineray", `${BASE}?marca=SHINERAY`, '<path d="M4 6h16M4 12h16M4 18h10" />'],
     ["Haojue", `${BASE}?marca=HAOJUE`, '<path d="M4 6h16M4 12h16M4 18h10" />'],
     ["Honda", `${BASE}?marca=HONDA`, '<path d="M4 6h16M4 12h16M4 18h10" />'],
+    ["Elétricas", `${BASE}?marca=VOLTRIX`, '<path d="M13 3L5 14h6l-1 7 8-11h-6z" />'],
     ["Financiamento", wa(`Olá, VR Multimarcas! Vim pelo site e quero simular o financiamento de uma moto 0 km. Pode me passar as condições?\n${location.origin}/motos`), '<rect x="3" y="6" width="18" height="13" rx="2" /><path d="M3 10h18M7 15h4" />', true],
     ["Como chegar", "https://www.google.com/maps/place/VR+MULTIMARCAS+-+CONTAGEM/@-19.9241171,-44.0934438,17z/data=!3m1!4b1!4m6!3m5!1s0xa6959866432ac3:0x6a13c56bbc2e944d!8m2!3d-19.9241171!4d-44.0908689!16s%2Fg%2F11z6pbhwns", '<path d="M12 21s-7-4.4-7-10a7 7 0 0 1 14 0c0 5.6-7 10-7 10z" /><circle cx="12" cy="11" r="2.5" />', true],
     ["Pós-venda e oficina", "/#pos-venda", '<path d="M4 14v-2a8 8 0 0 1 16 0v2" /><rect x="3" y="13" width="4" height="6" rx="1.5" /><rect x="17" y="13" width="4" height="6" rx="1.5" />'],

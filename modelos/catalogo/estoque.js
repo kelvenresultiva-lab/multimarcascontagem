@@ -126,6 +126,22 @@ window.ESTOQUE = [
     observacoes: [],
     descricao: "A Honda PCX se destaca pela tecnologia avançada. Na VR Multimarcas Contagem você já encontra o modelo 2027.",
   },
+  // Elétricas: especificações do catálogo do Grupo Voltrix (06.10.2026); fotos enviadas pela loja.
+  // Os valores do catálogo são de revenda (sócios Voltrix) e NÃO vão para o site: o preço vem da loja.
+  {
+    slug: "voltrix-x13", tipo: "moto", marca: "VOLTRIX", modelo: "X13",
+    versao: "SCOOTER ELÉTRICA", ano: "", km: 0, preco: null,
+    cambio: "", combustivel: "Elétrica", potencia: "1.000 W", carroceria: "Elétrica", fotos: 3,
+    opcionais: ["Motor elétrico de 1.000 W", "Autonomia de até 60 km", "Som Bluetooth", "Marcha ré", "Suporte para celular", "Suporta até 200 kg"],
+    observacoes: ["Pronta entrega"],
+    descricao: "A X13 é uma scooter elétrica de pneus largos e visual robusto, para rodar na cidade sem gastar com gasolina. O motor de 1.000 W chega a 32 km/h e a bateria de 48 V / 20 Ah garante até 60 km por carga. Tem som Bluetooth, marcha ré para manobrar com facilidade, suporte para celular e aguenta até 200 kg.",
+    ficha: {
+      titulos: { motor: "Motor, bateria e desempenho", dimensoes: "Capacidade" },
+      motor: ["Motor elétrico de 1.000 W", "Velocidade máxima: 32 km/h", "Bateria: 48 V / 20 Ah", "Autonomia: até 60 km por carga"],
+      dimensoes: ["Peso suportado: até 200 kg"],
+      itens: ["Som Bluetooth", "Marcha ré", "Suporte para celular"],
+    },
+  },
 ].map((v, i) => ({
   ...v,
   id: i + 1,
