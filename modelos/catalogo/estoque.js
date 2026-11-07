@@ -255,6 +255,16 @@ window.ESTOQUE = [
       itens: ["Para-brisa alto", "Farol duplo", "Proteção frontal"],
     },
   },
+  // Thunder: não está no catálogo Voltrix nem foi achada na internet; entra só com as fotos, sem ficha técnica.
+  {
+    slug: "voltrix-thunder", tipo: "moto", marca: "VOLTRIX", modelo: "THUNDER",
+    versao: "SCOOTER ELÉTRICA", ano: "", km: 0, preco: null,
+    cambio: "", combustivel: "Elétrica", potencia: "", carroceria: "Elétrica", fotos: 3,
+    opcionais: [],
+    observacoes: ["Pronta entrega"],
+    descricao: "A Thunder é uma scooter elétrica de visual moderno, com carenagem branca e detalhes em verde. Fale com a VR Multimarcas para saber a autonomia, a velocidade e as condições de pagamento.",
+    ficha: {}, // vazia: a página não mostra a Ficha Técnica
+  },
 ].map((v, i) => ({
   ...v,
   id: i + 1,
