@@ -28,7 +28,7 @@ window.ESTOQUE = [
     slug: "shineray-new-jet-125", tipo: "moto", marca: "SHINERAY", modelo: "NEW JET 125",
     cores: ["Bege/Marrom", "Preta/Vinho", "Branca/Azul", "Cinza"],
     versao: "MOTONETA 125CC", ano: "2026/2027", km: 0, preco: 14490,
-    cambio: "Semiautomático, 4 marchas", combustivel: "", carroceria: "Motoneta", fotos: 2,
+    cambio: "Semiautomático, 4 marchas", combustivel: "", carroceria: "Motoneta", fotos: 3,
     opcionais: ["Painel 100% digital","Farol full LED e setas em LED","Freio dianteiro a disco","Rodas de liga leve","Guarda-volume sob o banco","Baixo consumo"],
     observacoes: [],
     descricao: "A Shineray New Jet 125 é uma motoneta para o dia a dia na cidade: leve, econômica e fácil de pilotar. Tem motor 125 cc, câmbio de 4 marchas, painel 100% digital, farol full LED, freio dianteiro a disco e rodas de liga leve. Embaixo do banco há um guarda-volume para documentos e objetos pessoais.",
