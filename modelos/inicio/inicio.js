@@ -14,14 +14,6 @@
   // celX = onde os botões começam e terminam na arte do celular (%); pc = topo dos botões na arte do computador (%).
   const BANNERS = [
     { slug: "honda-pcx-2027", cel: [33.7, 40.2], celX: [11.9, 88], pc: 69.7 },
-    { slug: "haojue-dr-160", cel: [30.9, 36.7], celX: [15.6, 84.4], pc: 68.9 },
-    { slug: "shineray-shi-175", cel: [32.4, 39.0], celX: [14.9, 84.9], pc: 68.6 },
-    { slug: "shineray-jef-150", cel: [31.2, 37.9], celX: [13.6, 86.2], pc: 68.2 },
-    { slug: "shineray-urban-150", cel: [31.6, 37.8], celX: [16.5, 83.6], pc: 69.5 },
-    { slug: "shineray-new-jet-125", cel: [31.3, 36.8], celX: [12.4, 87.9], pc: 69.1 },
-    { slug: "honda-biz-125", cel: [31.3, 37.5], celX: [16.3, 83.6], pc: 67.8 },
-    { slug: "shineray-jet-50", cel: [30.7, 36.5], celX: [14.7, 85.2], pc: 69.6 },
-    { slug: "shineray-storm-200", cel: [34.9, 41.7], celX: [9.3, 90.7], soCelular: true }, // ainda sem arte para computador
   ].map((b) => ({ ...b, v: ESTOQUE.find((v) => v.slug === b.slug) })).filter((b) => b.v);
   const celular = matchMedia("(max-width: 860px)");
   const trilho = $("banner-trilho");
@@ -74,7 +66,7 @@
   $("banner-ant").addEventListener("click", () => { ir(atual - 1); reiniciar(); });
   $("banner-prox").addEventListener("click", () => { ir(atual + 1); reiniciar(); });
   montarBanners();
-  // a Storm só tem arte de celular: ao passar de uma largura para a outra, a lista de banners muda
+  // um banner com soCelular só tem arte de celular: ao passar de uma largura para a outra, a lista de banners muda
   celular.addEventListener("change", montarBanners);
   // arrastar com o dedo no celular
   let x0 = null;
