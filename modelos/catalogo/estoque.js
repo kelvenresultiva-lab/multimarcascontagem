@@ -271,6 +271,24 @@ window.ESTOQUE = [
       itens: ["Protetor de escapamento", "Descanso lateral"],
     },
   },
+  {
+    slug: "shineray-jef-170", tipo: "moto", marca: "SHINERAY", modelo: "JEF 170",
+    cores: ["Cinza Nardo"],
+    versao: "STREET 170CC", ano: "2026/2027", km: 0, preco: 17990,
+    cambio: "Manual, 5 marchas", combustivel: "", carroceria: "Street", fotos: 3,
+    opcionais: ["Farol e lanternas full LED", "Painel 100% digital", "Freio dianteiro a disco", "Rodas de liga leve aro 17\"", "Suspensão traseira monoshock", "Porta USB", "Cavalete central"],
+    observacoes: [],
+    descricao: "A Shineray Jef 170 é uma street de visual moderno para a rotina na cidade. Tem motor de 169,30 cc com 13,59 cv e câmbio de 5 marchas, com partida elétrica e a pedal. Traz farol e lanternas full LED, painel 100% digital, freio dianteiro a disco, rodas de liga leve aro 17 e suspensão traseira monoshock, além de porta USB e cavalete central. O assento fica a 780 mm do chão e o tanque leva 12 litros.",
+    // ficha técnica oficial: https://www.shineray.com.br/produto/jef-170/ (consultado em 2026-11-08)
+    ficha: {
+      motor: ["Motor monocilíndrico, 4 tempos, 2 válvulas, SOHC", "Cilindrada: 169,30 cc", "Potência máxima: 13,59 cv a 8.000 rpm", "Torque máximo: 15 N.m a 6.000 rpm", "Câmbio de 5 marchas"],
+      dimensoes: ["Comprimento: 1.990 mm", "Largura: 770 mm", "Altura: 1.100 mm", "Altura do assento: 780 mm", "Distância entre eixos: 1.330 mm", "Distância do solo: 215 mm", "Peso líquido: 122 kg", "Peso em ordem de marcha: 135 kg", "Peso bruto total: 285 kg", "Carga máxima: 150 kg (piloto, passageiro, bagagem e acessórios)", "Tanque: 12 litros, incluindo a reserva"],
+      suspensao: ["Dianteira: garfo telescópico", "Traseira: balança monoamortecedora (monoshock)"],
+      rodas: ["Rodas de liga leve", "Pneu dianteiro: 90/90 aro 17", "Pneu traseiro: 120/80 aro 17", "Freio dianteiro: disco de 235 mm, hidráulico", "Freio traseiro: tambor de 128 mm, mecânico"],
+      eletrica: ["Bateria: 12 V / 7 Ah", "Partida elétrica e a pedal", "Farol e lanternas full LED", "Painel 100% digital", "Porta USB"],
+      itens: ["Protetor de escapamento", "Cavalete central", "Descanso lateral"],
+    },
+  },
   // Scooters elétricas: especificações do catálogo do fornecedor (06.10.2026); fotos enviadas pela loja.
   // Preço no site = valor de pronta entrega do catálogo + R$ 3.500 (pedido da loja em 2026-11-07). A Thunder não está no catálogo.
   {
