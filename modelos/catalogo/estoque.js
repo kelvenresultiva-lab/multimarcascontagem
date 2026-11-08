@@ -4,10 +4,12 @@
 // Shineray: ficha técnica, itens e versão tirados do site oficial (shineray.com.br) em 2026-11-06; o campo ficha
 // alimenta a "Ficha Técnica" da página da moto.
 // Preços: lista de estoque enviada pela loja em 2026-11-06 (SHI 175 EFI, New Jet 125, Jef 150 EFI, Storm 200 EFI, PCX 160 CBS).
+// Cores (campo cores) e preço da SE1: lista de estoque enviada pela loja em 2026-11-08.
 // Fotos em fotos/<slug>/01.jpg, 02.jpg... e capa.jpg (600x450) para os cards.
 window.ESTOQUE = [
   {
     slug: "shineray-shi-175", tipo: "moto", marca: "SHINERAY", modelo: "SHI 175",
+    cores: ["Cinza", "Azul"],
     versao: "TRAIL 175CC EFI", ano: "", km: 0, preco: 21590,
     cambio: "Manual, 5 marchas", combustivel: "", carroceria: "Trail", fotos: 3,
     opcionais: ["Injeção eletrônica (EFI)","Painel 100% digital","Freio a disco nas duas rodas","Rodas raiadas aro 19\" e 17\"","Suspensão traseira monoshock","Partida elétrica e a pedal"],
@@ -24,6 +26,7 @@ window.ESTOQUE = [
   },
   {
     slug: "shineray-new-jet-125", tipo: "moto", marca: "SHINERAY", modelo: "NEW JET 125",
+    cores: ["Bege/Marrom", "Preta/Vinho", "Branca/Azul", "Cinza"],
     versao: "MOTONETA 125CC", ano: "", km: 0, preco: 14490,
     cambio: "Semiautomático, 4 marchas", combustivel: "", carroceria: "Motoneta", fotos: 2,
     opcionais: ["Painel 100% digital","Farol full LED e setas em LED","Freio dianteiro a disco","Rodas de liga leve","Guarda-volume sob o banco","Baixo consumo"],
@@ -40,6 +43,7 @@ window.ESTOQUE = [
   },
   {
     slug: "shineray-jef-150", tipo: "moto", marca: "SHINERAY", modelo: "JEF 150",
+    cores: ["Branca"],
     versao: "STREET 150CC EFI", ano: "", km: 0, preco: 19490,
     cambio: "Manual, 5 marchas", combustivel: "", carroceria: "Street", fotos: 6,
     opcionais: ["Injeção eletrônica (EFI)","Painel 100% digital","Lanternas full LED","Freio dianteiro a disco","Rodas de liga leve aro 17\"","Suspensão traseira monoshock","Porta USB"],
@@ -72,6 +76,7 @@ window.ESTOQUE = [
   },
   {
     slug: "shineray-storm-200", tipo: "moto", marca: "SHINERAY", modelo: "STORM 200",
+    cores: ["Vermelha"],
     versao: "CROSSOVER 200CC EFI ABS", ano: "", km: 0, preco: 25990,
     cambio: "Manual, 6 marchas", combustivel: "", carroceria: "Crossover", fotos: 1,
     opcionais: ["Injeção eletrônica (EFI)","Freio ABS de dois canais","Freio a disco nas duas rodas","Suspensão dianteira invertida","Painel 100% digital com cores ajustáveis","Rodas de liga leve aro 17\""],
@@ -120,6 +125,7 @@ window.ESTOQUE = [
   },
   {
     slug: "honda-pcx-2027", tipo: "moto", marca: "HONDA", modelo: "PCX",
+    cores: ["Branca"],
     versao: "SCOOTER — MODELO 2027", ano: "2027", km: 0, preco: 25130,
     cambio: "Automático", combustivel: "", carroceria: "Scooter", fotos: 3,
     opcionais: [],
@@ -160,7 +166,8 @@ window.ESTOQUE = [
   },
   {
     slug: "shineray-se1-eletrica", tipo: "moto", marca: "SHINERAY", modelo: "SE1",
-    versao: "SCOOTER ELÉTRICA 2.000 W", ano: "", km: 0, preco: null,
+    cores: ["Branca"],
+    versao: "SCOOTER ELÉTRICA 2.000 W", ano: "", km: 0, preco: 17039,
     cambio: "", combustivel: "Elétrica", potencia: "2.000 W", carroceria: "Elétrica", fotos: 3,
     opcionais: ["Bateria de lítio removível", "Autonomia de até 60 km por bateria", "Capacidade para segunda bateria", "Motor com certificado IP67", "Freio a disco nas duas rodas", "Painel 100% digital"],
     observacoes: [],
