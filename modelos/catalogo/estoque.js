@@ -182,6 +182,23 @@ window.ESTOQUE = [
       eletrica: ["Painel 100% digital: velocidade, temperatura, modo de condução, nível de carga da bateria e odômetro"],
     },
   },
+  {
+    slug: "honda-pop-110i-es", tipo: "moto", marca: "HONDA", modelo: "POP 110i ES",
+    cores: ["Vermelha"],
+    versao: "CITY 110CC PGM-FI", ano: "2026/2027", km: 0, preco: 15900,
+    cambio: "4 marchas", combustivel: "Gasolina", carroceria: "Motoneta", fotos: 3,
+    opcionais: ["Injeção eletrônica PGM-FI", "Partida elétrica", "Freio de mão", "Rodas de liga leve", "Pneus sem câmara"],
+    observacoes: [],
+    descricao: "A Honda Pop 110i ES é uma moto simples de usar no dia a dia. Tem motor de 109,5 cc a gasolina, com injeção eletrônica PGM-FI, 8,4 cv e câmbio de 4 marchas, além de partida elétrica. Vem com freio de mão, rodas de liga leve e pneus sem câmara. O assento fica a 747 mm do chão e o tanque leva 4,2 litros.",
+    // ficha técnica oficial: https://www.honda.com.br/motos/street/city/pop110i-es (consultado em 2026-11-08)
+    ficha: {
+      motor: ["Motor OHC, monocilíndrico, 4 tempos, arrefecido a ar", "Cilindrada: 109,5 cc", "Injeção eletrônica PGM-FI", "Potência máxima: 8,4 cv a 7.250 rpm (gasolina)", "Torque máximo: 0,945 kgfm a 5.000 rpm (gasolina)", "Transmissão: 4 velocidades", "Diâmetro x curso: 47,0 x 63,1 mm", "Relação de compressão: 10,0:1", "Óleo do motor: 1,0 litro (0,8 litro na troca)"],
+      dimensoes: ["Comprimento: 1.837 mm", "Largura: 755 mm", "Altura: 1.046 mm", "Distância entre eixos: 1.238 mm", "Distância mínima do solo: 150 mm", "Altura do assento: 747 mm", "Peso seco: 88 kg", "Tanque: 4,2 litros", "Chassi monobloco"],
+      suspensao: ["Dianteira: garfo telescópico", "Traseira: convencional, com dois amortecedores"],
+      rodas: ["Rodas de liga leve", "Pneus sem câmara", "Pneu dianteiro: 70/90 aro 17", "Pneu traseiro: 80/100 aro 14", "Freio dianteiro: a tambor, 130 mm", "Freio traseiro: a tambor, 130 mm", "Freio de mão"],
+      eletrica: ["Bateria: 12 V / 4 Ah", "Partida elétrica", "Ignição eletrônica", "Farol: 35/35 W"],
+    },
+  },
   // Scooters elétricas: especificações do catálogo do fornecedor (06.10.2026); fotos enviadas pela loja.
   // Preço no site = valor de pronta entrega do catálogo + R$ 3.500 (pedido da loja em 2026-11-07). A Thunder não está no catálogo.
   {
