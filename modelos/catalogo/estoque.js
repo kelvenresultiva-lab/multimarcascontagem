@@ -78,7 +78,7 @@ window.ESTOQUE = [
     slug: "shineray-storm-200", tipo: "moto", marca: "SHINERAY", modelo: "STORM 200",
     cores: ["Vermelha"],
     versao: "CROSSOVER 200CC EFI ABS", ano: "2026/2027", km: 0, preco: 25990,
-    cambio: "Manual, 6 marchas", combustivel: "", carroceria: "Crossover", fotos: 1,
+    cambio: "Manual, 6 marchas", combustivel: "", carroceria: "Crossover", fotos: 3,
     opcionais: ["Injeção eletrônica (EFI)","Freio ABS de dois canais","Freio a disco nas duas rodas","Suspensão dianteira invertida","Painel 100% digital com cores ajustáveis","Rodas de liga leve aro 17\""],
     observacoes: [],
     descricao: "A Shineray Storm 200 EFI é uma crossover de visual arrojado. Tem motor de 198 cc com 4 válvulas e injeção eletrônica, câmbio de 6 marchas, freio ABS de dois canais com disco nas duas rodas e suspensão dianteira invertida. O painel é 100% digital e permite trocar as cores.",
