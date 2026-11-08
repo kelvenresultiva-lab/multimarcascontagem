@@ -45,7 +45,7 @@ window.ESTOQUE = [
     slug: "shineray-jef-150", tipo: "moto", marca: "SHINERAY", modelo: "JEF 150",
     cores: ["Branca"],
     versao: "STREET 150CC EFI", ano: "2026/2027", km: 0, preco: 19490,
-    cambio: "Manual, 5 marchas", combustivel: "", carroceria: "Street", fotos: 6,
+    cambio: "Manual, 5 marchas", combustivel: "", carroceria: "Street", fotos: 3,
     opcionais: ["Injeção eletrônica (EFI)","Painel 100% digital","Lanternas full LED","Freio dianteiro a disco","Rodas de liga leve aro 17\"","Suspensão traseira monoshock","Porta USB"],
     observacoes: [],
     descricao: "A Shineray Jef 150 EFI é uma street de visual esportivo para o uso diário. Tem motor 150 cc com injeção eletrônica, câmbio de 5 marchas, painel 100% digital, lanternas full LED, freio dianteiro a disco e rodas de liga leve aro 17. O tanque leva 12 litros.",
