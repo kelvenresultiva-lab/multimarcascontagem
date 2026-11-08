@@ -217,6 +217,24 @@ window.ESTOQUE = [
       itens: ["Porta-objetos central de 19,7 litros", "Porta-luvas aberto no escudo frontal", "Dois ganchos de utilidades", "Alças do garupa", "Tampa de combustível externa"],
     },
   },
+  {
+    slug: "shineray-shi-250", tipo: "moto", marca: "SHINERAY", modelo: "SHI 250",
+    cores: ["Preta/Branca"],
+    versao: "TRAIL 250CC", ano: "2026/2027", km: 0, preco: 29999,
+    cambio: "Manual, 6 marchas", combustivel: "", carroceria: "Trail", fotos: 3,
+    opcionais: ["Painel 100% digital", "Iluminação full LED com luz DRL", "Freio a disco nas duas rodas, com CBS", "Rodas raiadas aro 21\" e 18\"", "Suspensão dianteira invertida", "Banco bipartido", "Porta USB"],
+    observacoes: [],
+    descricao: "A Shineray SHI 250 é uma trail para rodar na cidade e fora dela. Tem motor de 249,9 cc com 19,3 cv e câmbio de 6 marchas. A suspensão dianteira é invertida e a traseira é monoshock, com rodas raiadas de aro 21 na frente e 18 atrás e freio a disco nas duas rodas, com sistema CBS. Traz iluminação full LED com luz DRL, painel 100% digital, porta USB e banco bipartido. O tanque leva 18 litros.",
+    // ficha técnica oficial: https://www.shineray.com.br/produto/shi-250/ (consultado em 2026-11-08)
+    ficha: {
+      motor: ["Motor monocilíndrico, 4 tempos, 2 válvulas, SOHC balanceado", "Cilindrada: 249,9 cc", "Refrigeração a ar", "Potência máxima: 19,3 cv a 8.000 rpm", "Torque máximo: 18 N.m a 6.000 rpm", "Câmbio de 6 marchas", "Embreagem manual, multidisco banhada a óleo", "Diâmetro x curso: 72 x 61,4 mm"],
+      dimensoes: ["Comprimento: 2.140 mm", "Largura: 880 mm", "Altura: 1.280 mm", "Altura do assento: 870 mm", "Distância entre eixos: 1.380 mm", "Distância do solo: 300 mm", "Peso: 156 kg", "Carga máxima: 150 kg (incluindo o condutor)", "Tanque: 18 litros", "Chassi berço duplo"],
+      suspensao: ["Dianteira: garfo telescópico invertido, curso de 150 mm", "Traseira: balança monoamortecedora (monoshock)"],
+      rodas: ["Rodas raiadas", "Pneu dianteiro: 90/90 aro 21", "Pneu traseiro: 120/80 aro 18 ou 4.6 aro 18", "Freio dianteiro: disco de 267 mm, hidráulico", "Freio traseiro: disco de 220 mm, hidráulico", "Sistema de freio combinado (CBS)"],
+      eletrica: ["Bateria: 12 V / 8,0 Ah", "Partida elétrica", "Iluminação full LED com luz DRL", "Painel 100% digital: combustível, velocidade, marcha, neutro, conta-giros e odômetro", "Porta USB"],
+      itens: ["Protetor de escapamento", "Banco bipartido", "Cavalete lateral"],
+    },
+  },
   // Scooters elétricas: especificações do catálogo do fornecedor (06.10.2026); fotos enviadas pela loja.
   // Preço no site = valor de pronta entrega do catálogo + R$ 3.500 (pedido da loja em 2026-11-07). A Thunder não está no catálogo.
   {
