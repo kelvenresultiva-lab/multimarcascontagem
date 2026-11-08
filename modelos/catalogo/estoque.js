@@ -199,6 +199,24 @@ window.ESTOQUE = [
       eletrica: ["Bateria: 12 V / 4 Ah", "Partida elétrica", "Ignição eletrônica", "Farol: 35/35 W"],
     },
   },
+  {
+    slug: "honda-elite-125", tipo: "moto", marca: "HONDA", modelo: "ELITE 125",
+    cores: ["Cinza"],
+    versao: "SCOOTER 125CC PGM-FI", ano: "2026/2027", km: 0, preco: 20160,
+    cambio: "Automático (V-Matic)", combustivel: "Gasolina", carroceria: "Scooter", fotos: 3,
+    opcionais: ["Injeção eletrônica PGM-FI", "Sistema que desliga o motor em marcha lenta", "Freios com sistema CBS", "Farol em LED", "Entrada USB-C", "Porta-objetos central de 19,7 litros", "Tampa de combustível externa"],
+    observacoes: [],
+    descricao: "A Honda Elite 125 é uma scooter automática feita para a rotina na cidade. Tem motor de 123,9 cc com injeção eletrônica PGM-FI e um sistema que desliga o motor depois de 3 segundos em marcha lenta, religando ao acelerar. O freio dianteiro é a disco, com sistema CBS, e o farol é de LED. O porta-objetos central tem 19,7 litros e acomoda um capacete aberto. Há entrada USB-C, e a tampa de combustível externa permite abastecer sem descer da scooter.",
+    // ficha técnica oficial: https://www.honda.com.br/motos/street/scooter/elite-125 (consultado em 2026-11-08)
+    ficha: {
+      motor: ["Motor OHC, monocilíndrico, 4 tempos, arrefecido a ar", "Cilindrada: 123,9 cc", "Injeção eletrônica PGM-FI", "Potência máxima: 8,2 cv a 6.250 rpm", "Torque máximo: 1,06 kgfm a 5.000 rpm", "Transmissão: V-Matic", "Diâmetro x curso: 50,0 x 63,1 mm", "Relação de compressão: 10,0:1", "Óleo do motor: 0,75 litro (0,55 litro na troca)"],
+      dimensoes: ["Comprimento: 1.830 mm", "Largura: 707 mm", "Altura: 1.172 mm", "Distância entre eixos: 1.260 mm", "Distância mínima do solo: 171 mm", "Altura do assento: 765 mm", "Peso seco: 100 kg", "Tanque: 5,3 litros", "Chassi monobloco (underbone)"],
+      suspensao: ["Dianteira: garfo telescópico, curso de 90 mm", "Traseira: monoamortecida, curso de 70 mm"],
+      rodas: ["Pneu dianteiro: 90/90 aro 12", "Pneu traseiro: 100/90 aro 10", "Freio dianteiro: a disco, 159,8 mm", "Freio traseiro: a tambor, 130 mm", "Sistema de freios CBS"],
+      eletrica: ["Bateria: 12 V / 5 Ah", "Partida elétrica", "Ignição eletrônica", "Farol em LED", "Entrada USB-C"],
+      itens: ["Porta-objetos central de 19,7 litros", "Porta-luvas aberto no escudo frontal", "Dois ganchos de utilidades", "Alças do garupa", "Tampa de combustível externa"],
+    },
+  },
   // Scooters elétricas: especificações do catálogo do fornecedor (06.10.2026); fotos enviadas pela loja.
   // Preço no site = valor de pronta entrega do catálogo + R$ 3.500 (pedido da loja em 2026-11-07). A Thunder não está no catálogo.
   {
