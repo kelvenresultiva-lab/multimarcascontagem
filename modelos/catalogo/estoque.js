@@ -253,6 +253,24 @@ window.ESTOQUE = [
       itens: ["Guarda-volume", "Cavalete central", "Descanso lateral", "Protetor de escapamento"],
     },
   },
+  {
+    slug: "shineray-new-shi-175", tipo: "moto", marca: "SHINERAY", modelo: "NEW SHI 175",
+    cores: ["Preta"],
+    versao: "TRAIL 175CC", ano: "2026/2027", km: 0, preco: 19490,
+    cambio: "Manual, 5 marchas", combustivel: "", carroceria: "Trail", fotos: 3,
+    opcionais: ["Iluminação full LED com DRL", "Painel digital", "Freio a disco nas duas rodas", "Rodas raiadas aro 19\" e 17\"", "Portas USB e USB-C", "Alarme antifurto e partida remota", "Controlador de mídia no punho"],
+    observacoes: [],
+    descricao: "A Shineray New SHI 175 é uma trail para a cidade e para diferentes trajetos. Tem motor de 175,11 cc com 15,63 cv e câmbio de 5 marchas, partida elétrica e a pedal. As rodas são raiadas, com aro 19 na frente e 17 atrás, e o freio é a disco nas duas. Traz iluminação full LED com DRL, painel digital, portas USB e USB-C, controlador de mídia no punho, alarme antifurto e partida remota. O assento fica a 875 mm do chão e o tanque leva 14,5 litros.",
+    // ficha técnica oficial: https://www.shineray.com.br/produto/shi-175/ (consultado em 2026-11-08). A página informa traseira 110/90-19 na ficha e aro 17 no texto; aqui vale aro 17.
+    ficha: {
+      motor: ["Motor monocilíndrico, 4 tempos, 2 válvulas, SOHC", "Cilindrada: 175,11 cc", "Potência máxima: 15,63 cv a 8.500 rpm", "Torque máximo: 14 N.m a 6.500 rpm", "Câmbio de 5 marchas", "Embreagem manual, multidisco banhada a óleo"],
+      dimensoes: ["Comprimento: 2.080 mm", "Largura: 860 mm", "Altura: 1.270 mm", "Altura do assento: 875 mm", "Distância entre eixos: 1.365 mm", "Distância do solo: 260 mm", "Peso líquido: 129 kg", "Peso em ordem de marcha: 145 kg", "Peso bruto total: 295 kg", "Carga máxima: 150 kg (piloto, passageiro, bagagem e acessórios)", "Tanque: 14,5 litros, incluindo a reserva"],
+      suspensao: ["Dianteira: garfo telescópico convencional, curso de 176 mm", "Traseira: balança monoamortecedora (monoshock), curso na roda de 150 mm"],
+      rodas: ["Rodas raiadas", "Pneu dianteiro: 90/90 aro 19", "Pneu traseiro: 110/90 aro 17", "Freio dianteiro: disco de 265 mm, hidráulico", "Freio traseiro: disco de 220 mm, hidráulico"],
+      eletrica: ["Bateria: 12 V / 6,5 Ah", "Partida elétrica e a pedal", "Iluminação full LED com DRL", "Painel digital", "Portas USB e USB-C", "Controlador de mídia no punho", "Alarme antifurto e partida remota"],
+      itens: ["Protetor de escapamento", "Descanso lateral"],
+    },
+  },
   // Scooters elétricas: especificações do catálogo do fornecedor (06.10.2026); fotos enviadas pela loja.
   // Preço no site = valor de pronta entrega do catálogo + R$ 3.500 (pedido da loja em 2026-11-07). A Thunder não está no catálogo.
   {
