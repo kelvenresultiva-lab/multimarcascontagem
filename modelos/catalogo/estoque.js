@@ -158,6 +158,23 @@ window.ESTOQUE = [
       eletrica: ["Bateria: 12 V / 9 Ah", "Partida elétrica", "Painel 100% digital: velocímetro, odômetro, indicador de neutro e conta-giros", "Duas portas USB de 5 V"],
     },
   },
+  {
+    slug: "shineray-se1-eletrica", tipo: "moto", marca: "SHINERAY", modelo: "SE1",
+    versao: "SCOOTER ELÉTRICA 2.000 W", ano: "", km: 0, preco: null,
+    cambio: "", combustivel: "Elétrica", potencia: "2.000 W", carroceria: "Elétrica", fotos: 3,
+    opcionais: ["Bateria de lítio removível", "Autonomia de até 60 km por bateria", "Capacidade para segunda bateria", "Motor com certificado IP67", "Freio a disco nas duas rodas", "Painel 100% digital"],
+    observacoes: [],
+    descricao: "A Shineray SE1 é uma scooter elétrica compacta, com motor de 2.000 W que dispensa manutenção, tem certificado IP67 contra água e chega a até 59 km/h. A bateria de lítio de 60 V / 23,4 Ah é removível, carrega em 6 a 8 horas e tem autonomia estimada de até 60 km, com capacidade para uma segunda bateria. Traz rodas de liga leve aro 12, freio a disco na frente e atrás e painel 100% digital.",
+    // ficha técnica oficial: https://www.shineray.com.br/produto/se1/ (consultado em 2026-11-08)
+    ficha: {
+      titulos: { motor: "Motor, bateria e desempenho", dimensoes: "Dimensões e capacidade" },
+      motor: ["Motor elétrico indutivo brushless", "Potência: 2.000 W", "Certificado IP67 (resistente à água)", "Velocidade máxima: até 59 km/h", "Bateria de lítio removível: 60 V / 23,4 Ah", "Tempo de recarga: 6 a 8 horas", "Autonomia estimada: até 60 km por bateria", "Capacidade para uma segunda bateria"],
+      dimensoes: ["Comprimento: 1.960 mm", "Largura: 700 mm", "Altura: 1.140 mm", "Distância entre eixos: 1.400 mm", "Peso seco: 86 kg", "Carga máxima: 120 kg"],
+      suspensao: ["Dianteira: garfo telescópico", "Traseira: convencional, com dois amortecedores"],
+      rodas: ["Rodas de liga leve", "Pneu dianteiro: 90/90 aro 12", "Pneu traseiro: 90/90 aro 12", "Freio dianteiro: disco", "Freio traseiro: disco"],
+      eletrica: ["Painel 100% digital: velocidade, temperatura, modo de condução, nível de carga da bateria e odômetro"],
+    },
+  },
   // Scooters elétricas: especificações do catálogo do fornecedor (06.10.2026); fotos enviadas pela loja.
   // Preço no site = valor de pronta entrega do catálogo + R$ 3.500 (pedido da loja em 2026-11-07). A Thunder não está no catálogo.
   {
