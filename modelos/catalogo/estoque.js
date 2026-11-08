@@ -235,6 +235,24 @@ window.ESTOQUE = [
       itens: ["Protetor de escapamento", "Banco bipartido", "Cavalete lateral"],
     },
   },
+  {
+    slug: "shineray-rio-125-efi", tipo: "moto", marca: "SHINERAY", modelo: "RIO 125 EFI",
+    cores: ["Cinza"],
+    versao: "MOTONETA 125CC EFI", ano: "2026/2027", km: 0, preco: 14990,
+    cambio: "4 marchas", combustivel: "", carroceria: "Motoneta", fotos: 3,
+    opcionais: ["Injeção eletrônica (EFI)", "Iluminação full LED com luz DRL", "Painel 100% digital", "Freio dianteiro a disco", "Rodas de liga leve", "Guarda-volume", "Porta USB", "Cavalete central"],
+    observacoes: [],
+    descricao: "A Shineray Rio 125 EFI é uma motoneta com motor de 123,67 cc, injeção eletrônica e câmbio de 4 marchas. Tem iluminação full LED com luz DRL, painel 100% digital com indicadores de combustível, marcha e neutro, freio dianteiro a disco e rodas de liga leve, com aro 17 na frente e 14 atrás. Conta ainda com guarda-volume, porta USB e cavalete central. O assento fica a 750 mm do chão e o tanque leva 4,2 litros.",
+    // ficha técnica oficial: https://www.shineray.com.br/produto/rio-125-efi/ (consultado em 2026-11-08)
+    ficha: {
+      motor: ["Motor monocilíndrico, 4 tempos, 2 válvulas, OHC", "Cilindrada: 123,67 cc", "Injeção eletrônica (EFI)", "Potência máxima: 8 cv a 8.000 rpm", "Torque máximo: 9,0 N.m a 6.000 rpm", "Câmbio de 4 marchas"],
+      dimensoes: ["Comprimento: 1.910 mm", "Largura: 660 mm", "Altura: 1.105 mm", "Altura do assento: 750 mm", "Distância entre eixos: 1.275 mm", "Distância do solo: 110 mm", "Peso: 90 kg", "Carga máxima: 150 kg", "Tanque: 4,2 litros"],
+      suspensao: ["Dianteira: garfo telescópico", "Traseira: bi-shock"],
+      rodas: ["Rodas de liga leve", "Pneu dianteiro: 2.50 aro 17", "Pneu traseiro: 80/100 aro 14", "Freio dianteiro: disco de 220 mm, hidráulico", "Freio traseiro: tambor de 111 mm"],
+      eletrica: ["Bateria: 12 V / 5,0 Ah", "Partida elétrica", "Iluminação full LED com luz DRL", "Setas em LED", "Painel 100% digital: combustível, marcha e neutro", "Porta USB de 5 V"],
+      itens: ["Guarda-volume", "Cavalete central", "Descanso lateral", "Protetor de escapamento"],
+    },
+  },
   // Scooters elétricas: especificações do catálogo do fornecedor (06.10.2026); fotos enviadas pela loja.
   // Preço no site = valor de pronta entrega do catálogo + R$ 3.500 (pedido da loja em 2026-11-07). A Thunder não está no catálogo.
   {
