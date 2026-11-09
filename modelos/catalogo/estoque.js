@@ -438,7 +438,7 @@ window.ESTOQUE = [
   // Thunder: não está no catálogo do fornecedor nem foi achada na internet; entra só com as fotos, sem ficha técnica.
   {
     slug: "scooter-thunder", tipo: "moto", marca: "SCOOTERS", modelo: "THUNDER",
-    versao: "SCOOTER ELÉTRICA", ano: "", km: 0, preco: 10900, parcelas: "ou 21x de R$ 629,00",
+    versao: "SCOOTER ELÉTRICA", ano: "", km: 0, preco: 10900, parcelado: "21x de R$ 629,00",
     cambio: "", combustivel: "Elétrica", potencia: "", carroceria: "Elétrica", fotos: 3,
     opcionais: [],
     observacoes: ["Pronta entrega"],
