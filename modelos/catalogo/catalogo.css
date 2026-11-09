@@ -679,6 +679,8 @@ img { display: block; max-width: 100%; }
 .filtros__bloco:has(.alternador), .filtros__bloco:has(#anos), .filtros__bloco:has(#condicao), .filtros__bloco:has(#f-preco), .filtros__bloco:has(#f-km) { display: none; }
 .card__preco--consulta { font-size: 19px !important; color: var(--cinza); }
 .card__preco--parcelado { margin-bottom: 0; font-size: 20px !important; white-space: nowrap; }
+.card__preco--avista { margin-bottom: 0; white-space: nowrap; }
+.card__preco .preco-avista { font-size: 13px; font-weight: 600; color: var(--cinza); }
 .card__avista { display: block; margin: 2px 0 18px; font-size: 13px; font-weight: 600; color: var(--cinza); }
 
 /* Logo da VR (SVG) no topo e no rodapé */

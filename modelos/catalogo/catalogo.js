@@ -131,8 +131,8 @@
             ${km ? `<li>${icone.km}${km}</li>` : ""}
           </ul>
           <p class="card__local">${icone.local}${CIDADE}</p>
-          <strong class="card__preco${v.preco == null && !v.vendido ? " card__preco--consulta" : ""}${v.parcelado && !v.vendido ? " card__preco--parcelado" : ""}">${v.vendido ? "Vendido" : v.parcelado || reais(v.preco)}</strong>
-          ${v.parcelado && !v.vendido ? `<span class="card__avista">ou ${reais(v.preco)} à vista</span>` : ""}
+          <strong class="card__preco${v.preco == null && !v.vendido ? " card__preco--consulta" : ""}${v.parcelado && !v.vendido ? " card__preco--parcelado" : ""}${!v.parcelado && v.preco != null && !v.vendido ? " card__preco--avista" : ""}">${v.vendido ? "Vendido" : v.parcelado || (v.preco != null ? `${reais(v.preco)} <small class="preco-avista">à vista</small>` : reais(v.preco))}</strong>
+          ${v.vendido ? "" : v.parcelado ? `<span class="card__avista">ou ${reais(v.preco)} à vista</span>` : v.preco != null ? `<span class="card__avista">Consultar parcelamento</span>` : ""}
           <span class="botao-escuro card__botao">Ver detalhes</span>
         </a>
       </article>`;

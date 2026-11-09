@@ -241,13 +241,15 @@
     const economia = v.abaixoFipe && v.fipe && v.preco ? v.fipe - v.preco : 0;
     const check = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
     const destaque = !v.vendido && v.parcelado; // quando há "parcelado", ele vem em destaque e o à vista fica como segunda opção
-    const valor = v.vendido ? "Vendido" : destaque ? esc(v.parcelado) : v.preco == null ? "Sob consulta" : reais(v.preco);
-    const condicao = v.vendido ? "" : destaque ? `ou ${reais(v.preco)} à vista` : v.parcelas || "";
+    const aVista = !v.vendido && !destaque && v.preco != null; // sem parcelado informado: preço à vista + link para consultar o parcelamento
+    const valor = v.vendido ? "Vendido" : destaque ? esc(v.parcelado) : aVista ? `${reais(v.preco)} <small class="preco-avista">à vista</small>` : "Sob consulta";
+    const condicao = destaque ? `<span class="card-preco__condicao">ou ${reais(v.preco)} à vista</span>`
+      : aVista ? `<a class="card-preco__condicao card-preco__consultar" href="${linkW(msgParcelas)}" target="_blank" rel="noopener">Consultar parcelamento</a>` : "";
     infoPreco.innerHTML = `
       <div class="card-preco${v.vendido ? " card-preco--vendido" : ""}">
         <span class="card-preco__rotulo">${v.vendido ? "Este veículo" : "Preço"}</span>
         <strong class="card-preco__valor${v.preco == null && !v.vendido ? " card-preco__valor--consulta" : ""}${destaque ? " card-preco__valor--parcelado" : ""}" id="vehicleSendProposalPrice">${valor}</strong>
-        ${condicao ? `<span class="card-preco__condicao">${esc(condicao)}</span>` : ""}
+        ${condicao}
         ${economia > 0 ? `<span class="card-preco__fipe">${check}${reais(economia)} abaixo da FIPE</span>` : ""}
         <ul class="card-preco__resumo">${resumo.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>
         <a class="botao-whatsapp botao-whatsapp--grande" href="https://wa.me/${WHATS}?text=${texto}" target="_blank" rel="noopener">${v.vendido ? "Quero um parecido" : "Chamar no WhatsApp"}</a>
@@ -296,10 +298,12 @@
   const topoCard = $(".VehicleDetails__header__top");
   if (topoCard) {
     const destaque = !v.vendido && v.parcelado;
-    const valor = v.vendido ? "Vendido" : destaque ? esc(v.parcelado) : v.preco == null ? "Sob consulta" : reais(v.preco);
-    const condicao = v.vendido ? "" : destaque ? `ou ${reais(v.preco)} à vista` : v.parcelas || "";
+    const aVista = !v.vendido && !destaque && v.preco != null;
+    const valor = v.vendido ? "Vendido" : destaque ? esc(v.parcelado) : aVista ? `${reais(v.preco)} <small class="preco-avista">à vista</small>` : "Sob consulta";
+    const condicao = destaque ? `<span class="preco-mobile__condicao">ou ${reais(v.preco)} à vista</span>`
+      : aVista ? `<a class="preco-mobile__condicao preco-mobile__consultar" href="${linkWhats(msgParcelas)}" target="_blank" rel="noopener">Consultar parcelamento</a>` : "";
     topoCard.insertAdjacentHTML("afterend", `<div class="preco-mobile${v.vendido ? " preco-mobile--vendido" : ""}">
-      <div class="preco-mobile__coluna"><strong class="preco-mobile__valor${v.preco == null && !v.vendido ? " preco-mobile__valor--consulta" : ""}${destaque ? " preco-mobile__valor--parcelado" : ""}">${valor}</strong>${condicao ? `<span class="preco-mobile__condicao">${esc(condicao)}</span>` : ""}</div>
+      <div class="preco-mobile__coluna"><strong class="preco-mobile__valor${v.preco == null && !v.vendido ? " preco-mobile__valor--consulta" : ""}${destaque ? " preco-mobile__valor--parcelado" : ""}${aVista ? " preco-mobile__valor--avista" : ""}">${valor}</strong>${condicao}</div>
       ${v.vendido ? "" : `<a class="preco-mobile__parcelas" href="${linkWhats(msgParcelas)}" target="_blank" rel="noopener">Ver Parcelas
         <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 10h18M7 15h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>`}
     </div>`);
@@ -404,7 +408,7 @@
                 <h2 class="sc-fMiknA bwYKmi">${esc(c.marca + " " + c.modelo)}</h2>
                 <h3 class="sc-dVhcbM gklesL">${esc(c.versao)}</h3>
               </div>
-              <strong class="sc-fAjcbJ grmojk price">${c.parcelado ? esc(c.parcelado) : reais(c.preco)}</strong>
+              <strong class="sc-fAjcbJ grmojk price">${c.parcelado ? esc(c.parcelado) : reais(c.preco)}${!c.parcelado && c.preco != null ? " à vista" : ""}</strong>
               <div class="sc-caSCKo iFbWta">
                 <div class="sc-gisBJw gUPayE">${c.ano}</div>
                 <div class="sc-gisBJw gUPayE">${c.km === null ? "" : km(c) + " Km"}</div>

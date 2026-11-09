@@ -37,6 +37,9 @@
 .card-preco__valor--consulta { font-size: clamp(24px, 2vw, 30px); }
 .card-preco__valor.card-preco__valor--parcelado { font-size: clamp(26px, 2.2vw, 32px); }
 .card-preco__condicao { display: block; margin-top: 6px; font-size: 15px; font-weight: 600; color: #6b6b7b; }
+.card-preco__valor .preco-avista { font-size: 16px; font-weight: 600; letter-spacing: 0; color: #6b6b7b; }
+.card-preco__consultar { align-self: flex-start; color: #2e2d37; text-decoration: underline; text-underline-offset: 3px; }
+.card-preco__consultar:hover { color: #157a3d; }
 .card-preco--vendido .card-preco__valor { color: #b3123a; }
 
 .card-preco__fipe {
