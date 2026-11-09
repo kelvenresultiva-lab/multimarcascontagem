@@ -14,6 +14,7 @@
   // celX = onde os botões começam e terminam na arte do celular (%); pc = topo dos botões na arte do computador (%).
   const BANNERS = [
     { slug: "honda-pcx-2027", cel: [33.7, 40.2], celX: [11.9, 88], pc: 69.7 },
+    { slug: "haojue-dr-160", cel: [33.7, 40.2], celX: [11.9, 88], pc: 69.6 },
   ].map((b) => ({ ...b, v: ESTOQUE.find((v) => v.slug === b.slug) })).filter((b) => b.v);
   const celular = matchMedia("(max-width: 860px)");
   const trilho = $("banner-trilho");
