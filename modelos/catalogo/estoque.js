@@ -60,7 +60,7 @@ window.ESTOQUE = [
   },
   {
     slug: "shineray-urban-150", tipo: "moto", marca: "SHINERAY", modelo: "URBAN 150",
-    versao: "SCOOTER 150CC", ano: "", km: 0, preco: null,
+    versao: "SCOOTER 150CC", ano: "", km: 0, preco: 22400,
     cambio: "Automático", combustivel: "", carroceria: "Scooter", fotos: 3,
     opcionais: ["Freio ABS de dois canais","Sistema Start/Stop","Painel 100% digital com espelhamento do celular","Iluminação full LED","Pneus de uso misto","Freio a disco nas duas rodas"],
     observacoes: [],
@@ -101,7 +101,7 @@ window.ESTOQUE = [
   },
   {
     slug: "shineray-jet-50", tipo: "moto", marca: "SHINERAY", modelo: "JET 50",
-    versao: "MOTONETA 50CC", ano: "", km: 0, preco: null,
+    versao: "MOTONETA 50CC", ano: "", km: 0, preco: 14040,
     cambio: "Semiautomático, 4 marchas", combustivel: "", carroceria: "Motoneta", fotos: 3,
     opcionais: ["Painel 100% digital","Farol full LED e setas em LED","Freio dianteiro a disco","Rodas de liga leve","Guarda-volume sob o banco"],
     observacoes: [],
@@ -151,7 +151,7 @@ window.ESTOQUE = [
   },
   {
     slug: "shineray-shi-400sc", tipo: "moto", marca: "SHINERAY", modelo: "SHI 400SC",
-    versao: "SCRAMBLER 400CC ABS", ano: "", km: 0, preco: null,
+    versao: "SCRAMBLER 400CC ABS", ano: "", km: 0, preco: 23989,
     cambio: "Manual, 5 marchas", combustivel: "", carroceria: "Scrambler", fotos: 3,
     opcionais: ["Freio ABS de duplo canal", "Freio a disco nas duas rodas", "Painel TFT", "Iluminação full LED", "Porta USB", "Sensor de cavalete lateral", "Rodas raiadas aro 19\" e 18\""],
     observacoes: [],
@@ -167,7 +167,7 @@ window.ESTOQUE = [
   },
   {
     slug: "shineray-atv-200-efi", tipo: "moto", marca: "SHINERAY", modelo: "NEW ATV 200 EFI",
-    versao: "QUADRICICLO 200CC EFI", ano: "", km: 0, preco: null,
+    versao: "QUADRICICLO 200CC EFI", ano: "", km: 0, preco: 26900,
     cambio: "Automático", combustivel: "", carroceria: "Quadriciclo", fotos: 3,
     opcionais: ["Injeção eletrônica (EFI)", "Câmbio automático com marcha ré", "Freios a disco hidráulicos", "Painel 100% digital", "Duas portas USB", "Suspensão dianteira Double Wishbone"],
     observacoes: [],
@@ -438,7 +438,7 @@ window.ESTOQUE = [
   // Thunder: não está no catálogo do fornecedor nem foi achada na internet; entra só com as fotos, sem ficha técnica.
   {
     slug: "scooter-thunder", tipo: "moto", marca: "SCOOTERS", modelo: "THUNDER",
-    versao: "SCOOTER ELÉTRICA", ano: "", km: 0, preco: null,
+    versao: "SCOOTER ELÉTRICA", ano: "", km: 0, preco: 10900, parcelas: "ou 21x de R$ 629,00",
     cambio: "", combustivel: "Elétrica", potencia: "", carroceria: "Elétrica", fotos: 3,
     opcionais: [],
     observacoes: ["Pronta entrega"],

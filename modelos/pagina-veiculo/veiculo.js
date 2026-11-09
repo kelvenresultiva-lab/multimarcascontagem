@@ -245,6 +245,7 @@
       <div class="card-preco${v.vendido ? " card-preco--vendido" : ""}">
         <span class="card-preco__rotulo">${v.vendido ? "Este veículo" : "Preço"}</span>
         <strong class="card-preco__valor${v.preco == null && !v.vendido ? " card-preco__valor--consulta" : ""}" id="vehicleSendProposalPrice">${valor}</strong>
+        ${v.parcelas && !v.vendido ? `<span class="card-preco__condicao">${esc(v.parcelas)}</span>` : ""}
         ${economia > 0 ? `<span class="card-preco__fipe">${check}${reais(economia)} abaixo da FIPE</span>` : ""}
         <ul class="card-preco__resumo">${resumo.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>
         <a class="botao-whatsapp botao-whatsapp--grande" href="https://wa.me/${WHATS}?text=${texto}" target="_blank" rel="noopener">${v.vendido ? "Quero um parecido" : "Chamar no WhatsApp"}</a>
@@ -294,7 +295,7 @@
   if (topoCard) {
     const valor = v.vendido ? "Vendido" : v.preco == null ? "Sob consulta" : reais(v.preco);
     topoCard.insertAdjacentHTML("afterend", `<div class="preco-mobile${v.vendido ? " preco-mobile--vendido" : ""}">
-      <strong class="preco-mobile__valor${v.preco == null && !v.vendido ? " preco-mobile__valor--consulta" : ""}">${valor}</strong>
+      <div class="preco-mobile__coluna"><strong class="preco-mobile__valor${v.preco == null && !v.vendido ? " preco-mobile__valor--consulta" : ""}">${valor}</strong>${v.parcelas && !v.vendido ? `<span class="preco-mobile__condicao">${esc(v.parcelas)}</span>` : ""}</div>
       ${v.vendido ? "" : `<a class="preco-mobile__parcelas" href="${linkWhats(msgParcelas)}" target="_blank" rel="noopener">Ver Parcelas
         <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 10h18M7 15h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>`}
     </div>`);

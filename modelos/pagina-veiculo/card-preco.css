@@ -35,6 +35,7 @@
   white-space: nowrap;
 }
 .card-preco__valor--consulta { font-size: clamp(24px, 2vw, 30px); }
+.card-preco__condicao { display: block; margin-top: 6px; font-size: 15px; font-weight: 600; color: #6b6b7b; }
 .card-preco--vendido .card-preco__valor { color: #b3123a; }
 
 .card-preco__fipe {
