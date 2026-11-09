@@ -59,7 +59,7 @@
       ["Carroceria", ou(v.carroceria)],
       ["Combustível", ou(v.combustivel)],
       v.vendido ? ["Situação", "Vendido"] : ["Condição", "0 km"],
-      ...(v.cores?.length ? [[v.cores.length > 1 ? "Cores disponíveis" : "Cor disponível", v.cores.join(", "), true]] : []),
+      ...(v.cores?.length ? [[v.cores.length > 1 ? "Cores à pronta entrega" : "Cor à pronta entrega", v.cores.join(", "), true]] : []),
     ];
     ficha.innerHTML = itens
       .map(([t, val, cheio]) => `<li class="VehicleDetails__list__item${cheio ? " VehicleDetails__list__item__fullWidth" : ""}">
