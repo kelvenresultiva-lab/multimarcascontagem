@@ -126,7 +126,7 @@
         <h3 class="card__nome">${v.marca} ${v.modelo}</h3>
         <p class="card__versao">${titulo(v.versao)}</p>
         <p class="card__local">${iconeLocal}Contagem (MG)</p>
-        ${v.preco == null ? `<strong class="card__preco card__preco--consulta">Consulte o preço</strong>` : `<strong class="card__preco">R$ ${v.preco.toLocaleString("pt-BR")}</strong>`}
+        ${v.preco == null ? `<strong class="card__preco card__preco--consulta">Consulte o preço</strong>` : v.parcelado ? `<strong class="card__preco card__preco--parcelado">${v.parcelado}</strong><span class="card__avista">ou R$ ${v.preco.toLocaleString("pt-BR")} à vista</span>` : `<strong class="card__preco">R$ ${v.preco.toLocaleString("pt-BR")}</strong>`}
         <span class="botao-escuro card__botao">Ver detalhes</span>
       </a>
     </article>`;

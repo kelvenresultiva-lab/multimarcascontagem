@@ -108,6 +108,7 @@
   }
   .preco-mobile__valor { font-size: 34px; font-weight: 500; color: var(--texto); white-space: nowrap; letter-spacing: -.01em; }
   .preco-mobile__valor--consulta { font-size: 24px; }
+  .preco-mobile__valor.preco-mobile__valor--parcelado { font-size: clamp(21px, 6.2vw, 25px); }
   .preco-mobile__coluna { display: flex; flex-direction: column; min-width: 0; }
   .preco-mobile__condicao { margin-top: 2px; font-size: 14px; font-weight: 600; color: var(--cinza); }
   .preco-mobile--vendido .preco-mobile__valor { color: #b3123a; }

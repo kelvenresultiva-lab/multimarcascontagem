@@ -367,7 +367,7 @@ window.ESTOQUE = [
   },
   {
     slug: "scooter-speed-plus", tipo: "moto", marca: "SCOOTERS", modelo: "SPEED PLUS",
-    versao: "SCOOTER ELÉTRICA", ano: "", km: 0, preco: 9500,
+    versao: "SCOOTER ELÉTRICA", ano: "", km: 0, preco: 9500, parcelado: "21x de R$ 535,00",
     cambio: "", combustivel: "Elétrica", potencia: "1.000 W", carroceria: "Elétrica", fotos: 3,
     opcionais: ["Motor elétrico de 1.000 W", "Autonomia de 40 a 50 km", "Bateria de lítio 48 V (20 Ah ou 30 Ah)", "Baú traseiro", "Banco amplo", "Iluminação frontal"],
     observacoes: ["Pronta entrega"],
@@ -396,7 +396,7 @@ window.ESTOQUE = [
   },
   {
     slug: "scooter-conquest-van", tipo: "moto", marca: "SCOOTERS", modelo: "CONQUEST VAN",
-    versao: "SCOOTER ELÉTRICA", ano: "", km: 0, preco: 9500,
+    versao: "SCOOTER ELÉTRICA", ano: "", km: 0, preco: 9500, parcelado: "21x de R$ 540,00",
     cambio: "", combustivel: "Elétrica", potencia: "1.000 W", carroceria: "Elétrica", fotos: 3,
     opcionais: ["Motor elétrico de 1.000 W", "Autonomia de 40 a 50 km", "Bateria de lítio 48 V / 20 Ah", "Baú traseiro", "Banco amplo", "Iluminação frontal", "Suporta até 200 kg"],
     observacoes: ["Pronta entrega"],
@@ -424,7 +424,7 @@ window.ESTOQUE = [
   },
   {
     slug: "scooter-tank-bolin", tipo: "moto", marca: "SCOOTERS", modelo: "TANK BOLIN",
-    versao: "SCOOTER ELÉTRICA", ano: "", km: 0, preco: 9999,
+    versao: "SCOOTER ELÉTRICA", ano: "", km: 0, preco: 9999, parcelado: "21x de R$ 570,00",
     cambio: "", combustivel: "Elétrica", potencia: "1.000 W", carroceria: "Elétrica", fotos: 3,
     opcionais: ["Motor elétrico de 1.000 W", "Bateria 60 V / 21 Ah", "Recarga em 5 horas", "Para-brisa alto", "Farol duplo", "Proteção frontal"],
     observacoes: ["Pronta entrega"],
